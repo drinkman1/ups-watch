@@ -1,0 +1,18 @@
+{
+  "productId": "ols1000ea",
+  "shop": "proline",
+  "track": "a",
+  "url": "https://proline.pl/cyberpower-ups-ols1000ea-1000va-900w-p8077557",
+  "finalUrl": "https://proline.pl/cyberpower-ups-ols1000ea-1000va-900w-p8077557",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:16:57.557Z",
+  "bytes": 232971,
+  "expect": {
+    "status": "ok",
+    "price": 1519,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

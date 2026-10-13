@@ -1,0 +1,20 @@
+{
+  "productId": "ols1000ea",
+  "shop": "senetic",
+  "track": "a",
+  "url": "https://www.senetic.pl/product/OLS1000EA",
+  "finalUrl": "https://www.senetic.pl/product/OLS1000EA",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:16:59.680Z",
+  "bytes": 1091543,
+  "expect": {
+    "status": "ok",
+    "price": 1809.97,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": [
+    "cena netto ze strony (1471.52) przeliczona na brutto"
+  ]
+}

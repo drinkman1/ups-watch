@@ -1,0 +1,18 @@
+{
+  "productId": "9e1000i",
+  "shop": "empik",
+  "track": "a",
+  "url": "https://www.empik.com/zasilacz-awaryjny-ups-interaktywny-eaton-9e1000i-800-w-1000-va-eaton,p1559563787,elektronika-p",
+  "finalUrl": "https://www.empik.com/zasilacz-awaryjny-ups-interaktywny-eaton-9e1000i-800-w-1000-va-eaton,p1559563787,elektronika-p",
+  "httpStatus": 200,
+  "via": "browser",
+  "capturedAt": "2026-10-13T16:17:51.933Z",
+  "bytes": 133864,
+  "expect": {
+    "status": "ok",
+    "price": 2102.99,
+    "method": "meta",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

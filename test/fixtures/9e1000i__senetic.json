@@ -1,0 +1,20 @@
+{
+  "productId": "9e1000i",
+  "shop": "senetic",
+  "track": "a",
+  "url": "https://www.senetic.pl/product/9E1000I",
+  "finalUrl": "https://www.senetic.pl/product/9E1000I",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:48.348Z",
+  "bytes": 1066764,
+  "expect": {
+    "status": "ok",
+    "price": 1828.44,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": [
+    "cena netto ze strony (1486.54) przeliczona na brutto"
+  ]
+}

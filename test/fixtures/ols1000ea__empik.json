@@ -1,0 +1,18 @@
+{
+  "productId": "ols1000ea",
+  "shop": "empik",
+  "track": "a",
+  "url": "https://www.empik.com/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-cyberpower,p1535509969,elektronika-p",
+  "finalUrl": "https://www.empik.com/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-cyberpower,p1535509969,elektronika-p",
+  "httpStatus": 200,
+  "via": "browser",
+  "capturedAt": "2026-10-13T16:17:12.610Z",
+  "bytes": 140130,
+  "expect": {
+    "status": "ok",
+    "price": 1050.99,
+    "method": "meta",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

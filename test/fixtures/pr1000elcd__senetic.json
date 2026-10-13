@@ -1,0 +1,20 @@
+{
+  "productId": "pr1000elcd",
+  "shop": "senetic",
+  "track": "a",
+  "url": "https://www.senetic.pl/product/PR1000ELCD",
+  "finalUrl": "https://www.senetic.pl/product/PR1000ELCD",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:24.639Z",
+  "bytes": 1089052,
+  "expect": {
+    "status": "ok",
+    "price": 2065,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": [
+    "cena netto ze strony (1678.86) przeliczona na brutto"
+  ]
+}

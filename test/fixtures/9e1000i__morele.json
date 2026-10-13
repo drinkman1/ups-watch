@@ -1,0 +1,18 @@
+{
+  "productId": "9e1000i",
+  "shop": "morele",
+  "track": "a",
+  "url": "https://www.morele.net/ups-eaton-9e-1000i-6289089/",
+  "finalUrl": "https://www.morele.net/ups-eaton-9e-1000i-6289089/",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:47.223Z",
+  "bytes": 506706,
+  "expect": {
+    "status": "ok",
+    "price": 1803.81,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

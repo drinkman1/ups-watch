@@ -1,0 +1,18 @@
+{
+  "productId": "ols1000ea",
+  "shop": "sferis",
+  "track": "a",
+  "url": "https://www.sferis.pl/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-i391716",
+  "finalUrl": "https://www.sferis.pl/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-i391716",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:16:55.969Z",
+  "bytes": 580279,
+  "expect": {
+    "status": "ok",
+    "price": 1455.92,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

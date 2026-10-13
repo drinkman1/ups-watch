@@ -1,0 +1,18 @@
+{
+  "productId": "pr1000ert2u",
+  "shop": "cebit",
+  "track": "a",
+  "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-PR1000ERT2U/101868",
+  "finalUrl": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-PR1000ERT2U/101868",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:33.929Z",
+  "bytes": 216017,
+  "expect": {
+    "status": "ok",
+    "price": 3088.99,
+    "method": "meta",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

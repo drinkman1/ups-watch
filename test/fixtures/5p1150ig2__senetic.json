@@ -1,0 +1,20 @@
+{
+  "productId": "5p1150ig2",
+  "shop": "senetic",
+  "track": "a",
+  "url": "https://www.senetic.pl/product/5P1150IG2",
+  "finalUrl": "https://www.senetic.pl/product/5P1150IG2",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:18:05.497Z",
+  "bytes": 1067880,
+  "expect": {
+    "status": "ok",
+    "price": 2646.57,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": [
+    "cena netto ze strony (2151.68) przeliczona na brutto"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "productId": "9e1000i",
+  "shop": "netland24",
+  "track": "a",
+  "url": "https://netland24.pl/sklep/636785/UPS-EATON-9E1000I-Eaton-UPS-9E-1000i",
+  "finalUrl": "https://netland24.pl/sklep/636785/UPS-EATON-9E1000I-Eaton-UPS-9E-1000i",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:40.198Z",
+  "bytes": 121892,
+  "expect": {
+    "status": "ok",
+    "price": 1772,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

@@ -1,0 +1,18 @@
+{
+  "productId": "pr1000ert2u",
+  "shop": "sferis",
+  "track": "a",
+  "url": "https://www.sferis.pl/zasilacz-ups-cyberpower-pr1000ert2u-i195252",
+  "finalUrl": "https://www.sferis.pl/zasilacz-ups-cyberpower-pr1000ert2u-i195252",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:25.897Z",
+  "bytes": 584951,
+  "expect": {
+    "status": "ok",
+    "price": 2635.71,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

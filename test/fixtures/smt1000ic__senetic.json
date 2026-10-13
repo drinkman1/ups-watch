@@ -1,0 +1,20 @@
+{
+  "productId": "smt1000ic",
+  "shop": "senetic",
+  "track": "a",
+  "url": "https://www.senetic.pl/product/SMT1000IC",
+  "finalUrl": "https://www.senetic.pl/product/SMT1000IC",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:18:21.845Z",
+  "bytes": 1131209,
+  "expect": {
+    "status": "ok",
+    "price": 2951.46,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": [
+    "cena netto ze strony (2399.56) przeliczona na brutto"
+  ]
+}

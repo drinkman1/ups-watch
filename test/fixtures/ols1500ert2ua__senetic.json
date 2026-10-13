@@ -1,0 +1,20 @@
+{
+  "productId": "ols1500ert2ua",
+  "shop": "senetic",
+  "track": "a",
+  "url": "https://www.senetic.pl/product/OLS1500ERT2UA",
+  "finalUrl": "https://www.senetic.pl/product/OLS1500ERT2UA",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:18:32.923Z",
+  "bytes": 1096639,
+  "expect": {
+    "status": "ok",
+    "price": 2590,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": [
+    "cena netto ze strony (2105.69) przeliczona na brutto"
+  ]
+}

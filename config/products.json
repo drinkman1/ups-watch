@@ -45,8 +45,7 @@
         { "shop": "proline", "kind": "shop", "url": "https://proline.pl/cyberpower-ups-ols1000ea-1000va-900w-p8077557" },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "variant": "IEC C13", "url": "https://www.senetic.pl/product/OLS1000EA" },
         { "shop": "empik", "kind": "shop", "variant": "-DE (Schuko)", "url": "https://www.empik.com/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-cyberpower,p1535509969,elektronika-p" },
-        { "shop": "morele", "kind": "shop", "variant": "-DE (Schuko)", "url": "https://www.morele.net/ups-cyberpower-main-stream-online-1000va-ols1000ea-de-8387937/" },
-        { "shop": "proshop", "kind": "shop", "variant": "IEC C13", "url": "https://www.proshop.pl/UPS/CyberPower-Smart-App-Online-S-OLS1000EA-UPS-900-Watt-1000-VA/3337331" }
+        { "shop": "morele", "kind": "shop", "variant": "-DE (Schuko)", "url": "https://www.morele.net/ups-cyberpower-main-stream-online-1000va-ols1000ea-de-8387937/" }
       ]
     },
     {
@@ -65,9 +64,6 @@
       "specSource": "https://www.cyberpower.com/global/en/product/sku/pr1000elcd",
       "specNote": "1000 VA / 900 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13, 2x 12 V 12 Ah.",
       "sources": [
-        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1120353-zasilacz-awaryjny-ups-cyberpower-ups-pr1000elcd.html" },
-        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/420264/cyberpower-pr1000elcd.html" },
-        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/CyberPower-PR1000ELCD-1000VA900W-UPS/2505731" },
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-pr1000elcd-ups-1000va-900w-580609/" },
         { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-ups-cyberpower-pr1000elcd-1000va-900w-topologia-line-interactive.html", "shipping": 0 },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/PR1000ELCD" }
@@ -92,8 +88,6 @@
         { "shop": "sferis", "kind": "shop", "url": "https://www.sferis.pl/zasilacz-ups-cyberpower-pr1000ert2u-i195252" },
         { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-pr1000ert2u-1000va-1000w-topologia-line-interactive.html", "shipping": 0 },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/PR1000ERT2U" },
-        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1120357-zasilacz-awaryjny-ups-cyberpower-ups-pr1000ert2u.html" },
-        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/685117/cyberpower-pr1000ert2u.html" },
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-pr1000ert2u-6055508/" },
         { "shop": "cebit", "kind": "shop", "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-PR1000ERT2U/101868" }
       ]
@@ -115,7 +109,6 @@
       "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 8x IEC C13. Wariant OLS1000ERT2UA-B ma inny EAN - nie jest sledzony.",
       "sources": [
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-ols1000ert2ua-13168676/" },
-        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/CyberPower-OLS1000ERT2UA-Smart-App-UPS-1000VA-900W-outputs-8x-IEC-C13/3114752" },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/OLS1000ERT2UA" }
       ]
     },
@@ -136,8 +129,6 @@
       "specNote": "1000 VA / 800 W, online, czysta sinusoida, USB HID, 4x IEC C13.",
       "sources": [
         { "shop": "netland24", "kind": "shop", "url": "https://netland24.pl/sklep/636785/UPS-EATON-9E1000I-Eaton-UPS-9E-1000i" },
-        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1124248-zasilacz-awaryjny-ups-eaton-ups-9e1000i-1000va-800w.html" },
-        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/906556/zasilacz-ups-eaton-9e1000i.html" },
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-eaton-9e-1000i-6289089/" },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/9E1000I" },
         { "shop": "empik", "kind": "shop", "url": "https://www.empik.com/zasilacz-awaryjny-ups-interaktywny-eaton-9e1000i-800-w-1000-va-eaton,p1559563787,elektronika-p" }
@@ -159,11 +150,8 @@
       "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.9E1000IR.html",
       "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 4x IEC C13. Na x-kom strona 1264797 ma w tytule 9E1000IR, ale to 3000 VA - nie uzywac.",
       "sources": [
-        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1264795-zasilacz-awaryjny-ups-eaton-ups-9e1000ir-1000va-900w-rack-2u.html" },
-        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/906450/zasilacz-ups-eaton-9e1000ir.html" },
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-eaton-9e-1000va-9e1000ir-13259315/" },
-        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/9E1000IR" },
-        { "shop": "premiumserwer", "kind": "shop", "url": "https://premiumserwer.pl/product/Zasilacz-awaryjny-UPS-Eaton-9E-1-kVA-900-W-4-x-C13-Double-Conversion-Online/11092" }
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/9E1000IR" }
       ]
     },
     {
@@ -204,7 +192,6 @@
       "sources": [
         { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-eaton-tower/zasilacz-awaryjny-ups-eaton-5sc-5sc1000i-tower-700-w-8-x-iec-c13-1-x-usb-czarny.html", "shipping": 0 },
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-eaton-5sc-1000i-5sc1000i-608241/" },
-        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/Eaton-5SC1000I-5SC-1000VA700W-Line-Interactive-UPS/2425659" },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/5SC1000i" },
         { "shop": "empik", "kind": "shop", "url": "https://www.empik.com/zasilacz-awaryjny-ups-eaton-5sc1000i-twr-1000va-eaton,p1433999763,elektronika-p" }
       ]
@@ -226,8 +213,6 @@
       "specNote": "1000 VA / 700 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13, SmartConnect.",
       "sources": [
         { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-apc-tower/zasilacz-awaryjny-ups-apc-smart-ups-smt1000ic-tower-1000va-700w-8-x-iec-c13-1-x-rj-45-1-x-usb-czarny.html", "shipping": 0 },
-        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/677811/apc-smart-smt1000ic.html" },
-        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/APC-SMT1000IC-Smart-UPS-1000VA700W-Line-Interactive-UPS/2668578" },
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-apc-smart-ups-srv-1000-smt1000ic-4914047/" },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/SMT1000IC" }
       ]
@@ -249,7 +234,6 @@
       "specNote": "1500 VA / 1350 W, online, czysta sinusoida, USB HID, 8x IEC C13. Wariant -B ma inny EAN - nie jest sledzony.",
       "sources": [
         { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-ols1500ert2ua-1500va-900w-topologia-online.html", "shipping": 0 },
-        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/CyberPower-OLS1500ERT2UA-1500VA1350W-UPS/3114753" },
         { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-ols1500ert2ua-13168677/" },
         { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/OLS1500ERT2UA" },
         { "shop": "cebit", "kind": "shop", "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-OLS1500ERT2UA-8xC13USBRS232RelayDry-contact/101875" },

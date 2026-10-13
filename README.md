@@ -110,14 +110,22 @@ JSON-LD → microdata → `og:price` → regex z konfiguracji. Każda cena ma wi
 ceny bazowej, co odcina m.in. same baterie zamienne. Strona musi zawierać EAN albo token
 modelu, inaczej wynik to `mismatch`, a nie cena.
 
-Duże sklepy (x-kom, Komputronik, Morele, Proshop) odbijają zwykłe zapytanie stroną Cloudflare.
-Wtedy bot otwiera **pełnego Chrome'a z oknem na wirtualnym ekranie** (`xvfb-run`), a nie
-headless. To wzór z car-watch: headless dostawał od Cloudflare 403, okno przechodziło
-nieinteraktywne sprawdzenie. **Captchy bot nie rozwiązuje**, a ochrony nie obchodzi. Strona
-z captchą (np. Ceneo „Przejdź do Ceneo") kończy jako `blocked`.
+Gdy zwykłe zapytanie odbije się od ochrony (403 albo strona pośrednia), bot otwiera **pełnego
+Chrome'a z oknem na wirtualnym ekranie** (`xvfb-run`), a nie headless. To wzór z car-watch:
+headless dostawał od Cloudflare 403, okno przechodziło nieinteraktywne sprawdzenie.
+**Captchy bot nie rozwiązuje** i ochrony nie obchodzi. Strona z captchą kończy jako `blocked`.
 
-Mniejsze sklepy (ITnes, Sferis, Proline, Netland24, Senetic, Empik, Cebit) oddają cenę
-w JSON-LD bez przeszkód.
+Stan źródeł z pierwszego zapisu stron (13.10.2026, runner Actions):
+
+| Źródło | Wynik |
+|---|---|
+| Morele, ITnes, Sferis, Proline, Netland24, Senetic, Cebit | cena z JSON-LD lub `og:price`, zwykłe zapytanie |
+| Empik | cena przez Chrome |
+| x-kom, Komputronik, Proshop, Premiumserwer | Cloudflare Turnstile („Cierpliwości…”) także dla Chrome'a, więc usunięte z toru A |
+| Ceneo | captcha, tylko tor B z polskiego łącza |
+
+**Senetic podaje w JSON-LD cenę netto.** Jego źródła mają `priceIsNet: true`, więc bot dolicza
+23% VAT. Bez tego każdy model wyglądał tam o ok. 19% taniej i leciały fałszywe alerty.
 
 ## Tor B — skan lokalny i Allegro
 

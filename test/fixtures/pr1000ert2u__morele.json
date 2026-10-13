@@ -1,0 +1,18 @@
+{
+  "productId": "pr1000ert2u",
+  "shop": "morele",
+  "track": "a",
+  "url": "https://www.morele.net/ups-cyberpower-pr1000ert2u-6055508/",
+  "finalUrl": "https://www.morele.net/ups-cyberpower-pr1000ert2u-6055508/",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:32.743Z",
+  "bytes": 499748,
+  "expect": {
+    "status": "ok",
+    "price": 2656.73,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

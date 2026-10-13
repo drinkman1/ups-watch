@@ -1,0 +1,18 @@
+{
+  "productId": "5sc1000i",
+  "shop": "empik",
+  "track": "a",
+  "url": "https://www.empik.com/zasilacz-awaryjny-ups-eaton-5sc1000i-twr-1000va-eaton,p1433999763,elektronika-p",
+  "finalUrl": "https://www.empik.com/zasilacz-awaryjny-ups-eaton-5sc1000i-twr-1000va-eaton,p1433999763,elektronika-p",
+  "httpStatus": 200,
+  "via": "browser",
+  "capturedAt": "2026-10-13T16:18:14.664Z",
+  "bytes": 134444,
+  "expect": {
+    "status": "ok",
+    "price": 2444.87,
+    "method": "meta",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

@@ -1,0 +1,18 @@
+{
+  "productId": "5p1150ig2",
+  "shop": "morele",
+  "track": "a",
+  "url": "https://www.morele.net/ups-eaton-5p-1150i-g2-5p1150ig2-14138990/",
+  "finalUrl": "https://www.morele.net/ups-eaton-5p-1150i-g2-5p1150ig2-14138990/",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:18:03.717Z",
+  "bytes": 489894,
+  "expect": {
+    "status": "ok",
+    "price": 2536.2,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

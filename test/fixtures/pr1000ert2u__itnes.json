@@ -1,0 +1,18 @@
+{
+  "productId": "pr1000ert2u",
+  "shop": "itnes",
+  "track": "a",
+  "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-pr1000ert2u-1000va-1000w-topologia-line-interactive.html",
+  "finalUrl": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-pr1000ert2u-1000va-1000w-topologia-line-interactive.html",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:26.655Z",
+  "bytes": 1075494,
+  "expect": {
+    "status": "ok",
+    "price": 2897,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}

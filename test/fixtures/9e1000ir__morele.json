@@ -1,0 +1,18 @@
+{
+  "productId": "9e1000ir",
+  "shop": "morele",
+  "track": "a",
+  "url": "https://www.morele.net/ups-eaton-9e-1000va-9e1000ir-13259315/",
+  "finalUrl": "https://www.morele.net/ups-eaton-9e-1000va-9e1000ir-13259315/",
+  "httpStatus": 200,
+  "via": "fetch",
+  "capturedAt": "2026-10-13T16:17:57.081Z",
+  "bytes": 585155,
+  "expect": {
+    "status": "ok",
+    "price": 2379.67,
+    "method": "jsonld",
+    "offers": 1
+  },
+  "issuesAtCapture": []
+}
