@@ -1,0 +1,254 @@
+name: ups-watch
+
+on:
+  schedule:
+    # Co 3 godziny, o minucie 23. GitHub przy obciazeniu porzuca zadania
+    # zaplanowane na :00 (gen-watch, 24-26.09.2026: 4 przebiegi z 8). Inna
+    # minuta niz gen-watch (:17), zeby dwa boty nie startowaly razem.
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      product:
+        description: "Tylko jeden model (id z config/products.json). Puste = wszystkie."
+        required: false
+        default: ""
+      dry_run:
+        description: "Podglad: bez zapisu historii, bez alertow, bez Telegrama i bez Pages"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+  # Po meta.stopAfter workflow sam sie wylacza (gh workflow disable).
+  actions: write
+
+concurrency:
+  group: ups-watch
+  cancel-in-progress: false
+
+env:
+  DRY: ${{ inputs.dry_run == true }}
+  # Pelny Chrome z oknem na wirtualnym ekranie (xvfb-run), nie headless -
+  # wzor z car-watch: headless dostaje od Cloudflare 403, okno przechodzi
+  # nieinteraktywne sprawdzenie. Captchy nie rozwiazujemy.
+  UPS_WATCH_HEADFUL: "1"
+  UPS_WATCH_CHROME_CHANNEL: chrome
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # 30 dni i koniec: po meta.stopAfter przebieg nie skanuje, wysyla
+      # pozegnanie i wylacza ten workflow. Historia i dashboard zostaja.
+      - name: Termin pracy bota
+        run: |
+          LIFE=$(node src/lifetime.mjs)
+          echo "LIFE=$LIFE" >> "$GITHUB_ENV"
+          echo "Bot: $LIFE"
+
+      - name: Pobierz historie z galezi data
+        run: |
+          if git fetch origin data:refs/remotes/origin/data 2>/dev/null; then
+            git checkout origin/data -- docs/data 2>/dev/null \
+              && echo "Wczytano historie cen." \
+              || echo "Galaz data istnieje, ale bez docs/data - traktuje jako pierwszy przebieg."
+          else
+            echo "Brak galezi data - pierwszy przebieg, historia bedzie pusta."
+          fi
+
+      - name: Pozegnanie i wylaczenie
+        if: env.LIFE == 'stopped' && env.DRY != 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          node src/notify-telegram.mjs --farewell || true
+          gh workflow disable "ups-watch" --repo "${{ github.repository }}"
+          echo "## ups-watch — koniec obserwacji (meta.stopAfter minal), workflow wylaczony" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Instalacja zaleznosci
+        if: env.LIFE == 'active'
+        run: npm install --no-audit --no-fund
+
+      - name: Testy offline
+        if: env.LIFE == 'active'
+        run: npm run check
+
+      # Zapas, gdyby na runnerze zabraklo Google Chrome - fetch.mjs spada
+      # wtedy na dolaczony Chromium.
+      - name: Instalacja Chromium dla Playwright
+        if: env.LIFE == 'active'
+        run: npx playwright install --with-deps chromium
+
+      - name: Skan cen
+        if: env.LIFE == 'active'
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.product }}" ]; then ARGS="$ARGS --product ${{ inputs.product }}"; fi
+          if [ "$DRY" = "true" ]; then ARGS="$ARGS --dry-run --dump --out $RUNNER_TEMP/dry.json"; fi
+          xvfb-run -a node src/scan.mjs $ARGS
+
+      # Tor B (skan lokalny) wypycha na data w dowolnym momencie. Scalamy
+      # pliki pisane z zewnatrz (market/, state.json, local-status.json),
+      # zeby force-push ponizej ich nie skasowal.
+      - name: Scalenie z aktualna galezia data
+        if: success() && env.LIFE == 'active' && env.DRY != 'true'
+        run: |
+          rm -rf /tmp/data-remote && mkdir -p /tmp/data-remote
+          if git fetch --depth 1 origin +refs/heads/data:refs/remotes/origin/data-now 2>/dev/null \
+             && git archive origin/data-now docs/data 2>/dev/null | tar -x -C /tmp/data-remote; then
+            node src/datasync.mjs /tmp/data-remote/docs/data
+          else
+            echo "Brak galezi data albo docs/data - nic do scalenia."
+          fi
+
+      - name: Budowa dashboardu
+        if: success() && env.LIFE == 'active' && env.DRY != 'true'
+        run: node src/dashboard.mjs
+
+      - name: Podsumowanie w logu przebiegu
+        if: always() && env.LIFE == 'active'
+        run: |
+          F=docs/data/latest.json
+          if [ "$DRY" = "true" ]; then F="$RUNNER_TEMP/dry.json"; fi
+          if [ ! -f "$F" ]; then
+            echo "Brak $F - skan nie doszedl do zapisu." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          node -e '
+            const fs = require("fs");
+            const dry = process.env.DRY === "true";
+            const d = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
+            const zl = (n) => n == null ? "—" : Number(n).toLocaleString("pl-PL") + " zl";
+            const cell = (s) => String(s == null ? "" : s).replace(/\|/g, "/");
+            const L = [`## ups-watch — ${d.run.status}${dry ? " (DRY-RUN: nic nie zapisane, zadnych alertow)" : ""}`, ""];
+            L.push(`Zrodla ok: **${d.run.sourcesOk}/${d.run.sourcesOk + d.run.sourcesBad}** · alerty: **${d.run.alerts}**`, "");
+            L.push("| # | Model | Najtaniej | Sklep | zl/min | Prog | Historia |", "|---|---|---|---|---|---|---|");
+            const ps = d.products.slice().sort((a, b) => (a.rank || 99) - (b.rank || 99));
+            for (const p of ps) {
+              L.push(`| ${p.rank || "—"} | ${cell(p.name)} | ${zl(p.best && p.best.price)} | ${cell(p.best && p.best.shop)} | ${p.perMin == null ? "—" : p.perMin} | ${zl(p.hardThreshold)} | ${p.historyPoints} |`);
+            }
+            if (dry) {
+              L.push("", "### Wszystkie zrodla", "", "| Model | Sklep | Status | Cena | Uwagi |", "|---|---|---|---|---|");
+              for (const p of d.products) for (const s of p.sources) {
+                const o = (p.offers || []).find((x) => x.shop === s.shop);
+                L.push(`| ${cell(p.id)} | ${cell(s.shop)} | ${s.status} | ${o ? zl(o.price) + " (" + o.method + ")" : "—"} | ${cell(s.issues.join("; ").slice(0, 160))} |`);
+              }
+            } else {
+              const bad = d.products.flatMap(p => p.sources.filter(s => s.status !== "ok")
+                .map(s => `- ${p.name} / ${s.shop}: \`${s.status}\`${s.bestEffort ? " (best-effort)" : ""} — ${s.issues.join("; ")}`));
+              if (bad.length) L.push("", "### Zrodla do sprawdzenia", ...bad);
+            }
+            if (d.local) {
+              const l = d.local;
+              const when = l.lastOkAt ? `ostatni udany skan ${l.lastOkAt.slice(0, 16).replace("T", " ")} UTC` : "brak udanego skanu";
+              L.push("", `### Tor B (skan lokalny)${l.stale ? " — CISZA" : ""}`, `${when} · ostatni przebieg: ${l.ok}/${l.ok + l.bad} zrodel z cena`);
+            }
+            fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, L.join("\n") + "\n");
+          ' "$F"
+
+      - name: Podglad dry-run jako artefakt
+        if: always() && env.DRY == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-run
+          path: ${{ runner.temp }}/dry.json
+          if-no-files-found: warn
+          retention-days: 14
+
+      # Powiadomienie idzie przez Issue przypisane do wlasciciela - maila
+      # wysyla sam GitHub, zaden sekret nie jest potrzebny.
+      - name: Alert jako Issue
+        if: success() && env.LIFE == 'active' && env.DRY != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ ! -f docs/data/latest.json ]; then exit 0; fi
+          COUNT=$(node -p 'JSON.parse(require("fs").readFileSync("docs/data/latest.json","utf8")).alerts.length')
+          if [ "$COUNT" = "0" ]; then echo "Brak alertow - nie zakladam issue."; exit 0; fi
+
+          node -e '
+            const fs = require("fs");
+            const d = JSON.parse(fs.readFileSync("docs/data/latest.json","utf8"));
+            const zl = (n) => n == null ? "—" : Number(n).toLocaleString("pl-PL") + " zl";
+            const pm = (n) => n == null ? "—" : Number(n).toLocaleString("pl-PL", { maximumFractionDigits: 1 }) + " zl/min";
+            const cell = (s) => String(s == null ? "" : s).replace(/\|/g, "/");
+            const L = [];
+            L.push("| Model | Cena | Sklep | Dlaczego alert | Zl/min przy 200 W | Baza |", "|---|---|---|---|---|---|");
+            for (const a of d.alerts) {
+              L.push(`| [${cell(a.name)}](${a.url}) | **${zl(a.price)}** | ${cell(a.shop)}${a.variant ? " (" + cell(a.variant) + ")" : ""} | ${cell(a.reasons.map(r => r.text).join(" · "))} | ${pm(a.perMin)}${a.rank ? ", miejsce " + a.rank + "/" + d.ranking.total : ""} | ${zl(a.baseline)} |`);
+            }
+            const b = d.ranking && d.ranking.best;
+            if (b) L.push("", `**Najtaniej za minute na calej liscie:** [${cell(b.name)}](${b.url}) — ${pm(b.perMin)} (${zl(b.price)} @ ${cell(b.shop)})`);
+            L.push("", `Koszt koncowy (z dostawa i rabatem, gdy znane): ${d.alerts.map(a => zl(a.effective.cost) + (a.effective.shippingKnown ? "" : " bez dostawy")).join(" · ")}`);
+            L.push("", "Alert porownuje **cene katalogowa** - progi pochodza z cen katalogowych. Koszt koncowy sprawdz sam przed zakupem.");
+            if (d.run.runUrl) L.push("", `Przebieg: ${d.run.runUrl}`);
+            fs.writeFileSync("/tmp/body.md", L.join("\n"));
+
+            const best = d.alerts.reduce((a, b) => (b.price < a.price ? b : a));
+            const date = new Date().toISOString().slice(0, 10);
+            const n = d.alerts.length;
+            const t = n % 10, h = n % 100;
+            const noun = n === 1 ? "model" : (t >= 2 && t <= 4 && (h < 12 || h > 14)) ? "modele" : "modeli";
+            fs.writeFileSync("/tmp/title.txt",
+              `[UPS_Alert] ${n} ${noun} - ${best.name} za ${zl(best.price)} (${date})`);
+          '
+
+          gh label create "UPS_Alert" --color "d03b3b" --description "Cena UPS ponizej progu albo nowe minimum" </dev/null >/dev/null 2>&1 || true
+
+          gh issue create \
+            --title "$(cat /tmp/title.txt)" \
+            --body-file /tmp/body.md \
+            --assignee "${{ github.repository_owner }}" \
+            --label "UPS_Alert"
+
+      # Drugi kanal, obok Issue. Krok idzie PRZED zapisem historii, bo dopisuje
+      # znaczniki anty-spamu do docs/data/state.json.
+      - name: Powiadomienie na Telegram
+        if: success() && env.LIFE == 'active' && env.DRY != 'true'
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node src/notify-telegram.mjs
+
+      - name: Zapis historii na galezi data
+        if: success() && env.LIFE == 'active' && env.DRY != 'true'
+        run: |
+          git config user.name "ups-watch bot"
+          git config user.email "actions@github.com"
+          git add -f docs/data
+          if git diff --staged --quiet; then
+            echo "Bez zmian w danych."
+          else
+            git commit -m "ups-watch: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push --force origin HEAD:refs/heads/data
+            echo "Historia zapisana na galezi data. main nietkniety."
+          fi
+
+      - name: Upload dashboardu dla Pages
+        if: success() && env.LIFE == 'active' && env.DRY != 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Publikacja na GitHub Pages
+        id: pages
+        if: success() && env.LIFE == 'active' && env.DRY != 'true'
+        uses: actions/deploy-pages@v4

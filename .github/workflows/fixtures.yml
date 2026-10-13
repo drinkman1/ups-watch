@@ -1,0 +1,51 @@
+name: fixtures
+
+# Przycisk "Run workflow": zapisuje prawdziwy HTML kazdego zrodla toru A do
+# test/fixtures i oddaje go jako artefakt. Niczego nie commituje - fixture'y
+# trafiaja do main dopiero po przejrzeniu cen (README, "Testy na zapisanym HTML").
+# Tor A zapisujemy tutaj, bo duze sklepy (x-kom, Komputronik, Morele, Proshop)
+# odpowiadaja przegladarce na runnerze, a zwyklemu fetch z laptopa - nie.
+
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Tylko te sklepy (po przecinku), np. x-kom,morele. Puste = wszystkie."
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+env:
+  UPS_WATCH_HEADFUL: "1"
+  UPS_WATCH_CHROME_CHANNEL: chrome
+
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm install --no-audit --no-fund
+
+      - run: npx playwright install --with-deps chromium
+
+      - name: Zapis stron toru A
+        run: |
+          ARGS="--track a"
+          if [ -n "${{ inputs.only }}" ]; then ARGS="$ARGS --only ${{ inputs.only }}"; fi
+          xvfb-run -a node src/save-fixtures.mjs $ARGS | tee /tmp/fixtures.log
+          { echo '## Zapisane strony'; echo '```'; cat /tmp/fixtures.log; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fixtures
+          path: test/fixtures
+          if-no-files-found: warn
+          retention-days: 14

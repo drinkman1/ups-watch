@@ -1,0 +1,260 @@
+{
+  "meta": {
+    "comment": "Szafa rack w garazu: 110-160 W w dzien, do ok. 250 W w nocy. Kryteria: czysta sinusoida, USB HID (Synology DSM), min. 10 min przy 200 W (cel 30), rack 1U/2U albo tower do ~30 cm wysokosci, glebokosc szafy 450-600 mm. Tylko nowe egzemplarze.",
+    "loadWatts": 200,
+    "stopAfter": "2026-11-12",
+    "stopNote": "Bot dziala 30 dni od 13.10.2026. Pierwszy przebieg po tej dacie wysyla pozegnanie na Telegram i sam wylacza workflow.",
+    "localTrack": false,
+    "localTrackNote": "Tor B (Ceneo, Amazon z laptopa) wylaczony do powrotu do Polski (18.10.2026). Z adresu spoza PL Ceneo daje captche, a Komputronik 403. Po wlaczeniu: localSources w modelach + scripts/zainstaluj-harmonogram.ps1.",
+    "alertRules": {
+      "medianWindowDays": 30,
+      "medianDropPct": 7,
+      "minSamplesForMedian": 8,
+      "realertAfterHours": 24,
+      "localStaleHours": 36
+    },
+    "telegram": {
+      "changes": true,
+      "daily": true,
+      "dailyFromHour": 7,
+      "comment": "changes: wiadomosc przy kazdej zmianie najnizszej ceny modelu (tor A, z filtrem migotania sklepow). daily: raport z pierwszym przebiegiem toru A po dailyFromHour czasu warszawskiego. Alerty, awarie i cisza toru B ida zawsze."
+    },
+    "researchNote": "Czasy podtrzymania, wymiary i odrzucone modele: OUTPUTS/ups-watch/research-2026-10-13.md w folderze CLAUDE cowork (poza repo)."
+  },
+  "products": [
+    {
+      "id": "ols1000ea",
+      "name": "CyberPower OLS1000EA",
+      "brand": "CyberPower",
+      "ean": ["4711027790190"],
+      "variantNote": "Scalone jawnie: OLS1000EA (4x IEC C13) i OLS1000EA-DE (gniazda Schuko). Elektronika i baterie te same, roznia sie gniazdami - wariant jest przy kazdej ofercie.",
+      "matchTokens": ["ols1000ea"],
+      "rejectTokens": ["ols1000ert2ua"],
+      "topology": "online",
+      "form": "tower",
+      "size": "140 x 191 x 327 mm, 9,4 kg",
+      "runtime200W": { "minutes": 35, "method": "wykres producenta", "note": "180 W: 38,7 min, 270 W: 23,5 min" },
+      "baseline": 1450,
+      "hardThreshold": 1000,
+      "specSource": "https://www.cyberpower.com/global/en/product/sku/ols1000ea",
+      "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 4x IEC C13 (-DE: Schuko).",
+      "sources": [
+        { "shop": "itnes", "kind": "shop", "variant": "-DE (Schuko)", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-1000va-900w-topologia-online.html", "shipping": 0 },
+        { "shop": "itnes-iec", "kind": "shop", "variant": "IEC C13", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-awaryjny-ups-cyberpower-ols1000ea-1000va-900w-topologia-online.html", "shipping": 0 },
+        { "shop": "sferis", "kind": "shop", "variant": "-DE (Schuko)", "url": "https://www.sferis.pl/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-i391716" },
+        { "shop": "proline", "kind": "shop", "url": "https://proline.pl/cyberpower-ups-ols1000ea-1000va-900w-p8077557" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "variant": "IEC C13", "url": "https://www.senetic.pl/product/OLS1000EA" },
+        { "shop": "empik", "kind": "shop", "variant": "-DE (Schuko)", "url": "https://www.empik.com/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-cyberpower,p1535509969,elektronika-p" },
+        { "shop": "morele", "kind": "shop", "variant": "-DE (Schuko)", "url": "https://www.morele.net/ups-cyberpower-main-stream-online-1000va-ols1000ea-de-8387937/" },
+        { "shop": "proshop", "kind": "shop", "variant": "IEC C13", "url": "https://www.proshop.pl/UPS/CyberPower-Smart-App-Online-S-OLS1000EA-UPS-900-Watt-1000-VA/3337331" }
+      ]
+    },
+    {
+      "id": "pr1000elcd",
+      "name": "CyberPower PR1000ELCD",
+      "brand": "CyberPower",
+      "ean": ["4712364143809"],
+      "matchTokens": ["pr1000elcd"],
+      "rejectTokens": ["pr1000elcdrt1u", "pr1000elcdrt2u"],
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "170 x 221 x 432 mm, 18,9 kg",
+      "runtime200W": { "minutes": 49, "method": "wykres producenta", "note": "200 W to punkt wykresu" },
+      "baseline": 1840,
+      "hardThreshold": 1650,
+      "specSource": "https://www.cyberpower.com/global/en/product/sku/pr1000elcd",
+      "specNote": "1000 VA / 900 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13, 2x 12 V 12 Ah.",
+      "sources": [
+        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1120353-zasilacz-awaryjny-ups-cyberpower-ups-pr1000elcd.html" },
+        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/420264/cyberpower-pr1000elcd.html" },
+        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/CyberPower-PR1000ELCD-1000VA900W-UPS/2505731" },
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-pr1000elcd-ups-1000va-900w-580609/" },
+        { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-ups-cyberpower-pr1000elcd-1000va-900w-topologia-line-interactive.html", "shipping": 0 },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/PR1000ELCD" }
+      ]
+    },
+    {
+      "id": "pr1000ert2u",
+      "name": "CyberPower PR1000ERT2U",
+      "brand": "CyberPower",
+      "ean": ["4712856277623"],
+      "matchTokens": ["pr1000ert2u"],
+      "rejectTokens": ["pr1000ert2uc", "rbp0128"],
+      "topology": "line-interactive",
+      "form": "rack 2U",
+      "size": "433 x 87 x 412 mm, 22,4 kg",
+      "runtime200W": { "minutes": 66, "method": "wykres producenta", "note": "200 W to punkt wykresu; najdluzej z modeli rack" },
+      "baseline": 2640,
+      "hardThreshold": 2400,
+      "specSource": "https://www.cyberpower.com/eu/pl/product/sku/pr1000ert2u",
+      "specNote": "1000 VA / 1000 W, line-interactive, czysta sinusoida, USB HID, 10x IEC C13. Waga 22,4 kg - sprawdz nosnosc szafy wiszacej.",
+      "sources": [
+        { "shop": "sferis", "kind": "shop", "url": "https://www.sferis.pl/zasilacz-ups-cyberpower-pr1000ert2u-i195252" },
+        { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-pr1000ert2u-1000va-1000w-topologia-line-interactive.html", "shipping": 0 },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/PR1000ERT2U" },
+        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1120357-zasilacz-awaryjny-ups-cyberpower-ups-pr1000ert2u.html" },
+        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/685117/cyberpower-pr1000ert2u.html" },
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-pr1000ert2u-6055508/" },
+        { "shop": "cebit", "kind": "shop", "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-PR1000ERT2U/101868" }
+      ]
+    },
+    {
+      "id": "ols1000ert2ua",
+      "name": "CyberPower OLS1000ERT2UA",
+      "brand": "CyberPower",
+      "ean": ["4712856273809"],
+      "matchTokens": ["ols1000ert2ua"],
+      "rejectTokens": [],
+      "topology": "online",
+      "form": "rack 2U",
+      "size": "438 x 88 x 430 mm, 13,5 kg",
+      "runtime200W": { "minutes": 35, "method": "wykres producenta", "note": "ta sama krzywa co OLS1000EA" },
+      "baseline": 2330,
+      "hardThreshold": 2100,
+      "specSource": "https://www.cyberpower.com/global/en/product/sku/ols1000ert2ua",
+      "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 8x IEC C13. Wariant OLS1000ERT2UA-B ma inny EAN - nie jest sledzony.",
+      "sources": [
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-ols1000ert2ua-13168676/" },
+        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/CyberPower-OLS1000ERT2UA-Smart-App-UPS-1000VA-900W-outputs-8x-IEC-C13/3114752" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/OLS1000ERT2UA" }
+      ]
+    },
+    {
+      "id": "9e1000i",
+      "name": "Eaton 9E 1000i",
+      "brand": "Eaton",
+      "ean": [],
+      "matchTokens": ["9e1000i"],
+      "rejectTokens": ["9e1000ir"],
+      "topology": "online",
+      "form": "tower",
+      "size": "144 x 228 x 356 mm, 9,5 kg",
+      "runtime200W": { "minutes": 25, "method": "wykres producenta", "note": "eg.eaton.com, 2x 12 V 9 Ah" },
+      "baseline": 1770,
+      "hardThreshold": 1600,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.9E1000I.html",
+      "specNote": "1000 VA / 800 W, online, czysta sinusoida, USB HID, 4x IEC C13.",
+      "sources": [
+        { "shop": "netland24", "kind": "shop", "url": "https://netland24.pl/sklep/636785/UPS-EATON-9E1000I-Eaton-UPS-9E-1000i" },
+        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1124248-zasilacz-awaryjny-ups-eaton-ups-9e1000i-1000va-800w.html" },
+        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/906556/zasilacz-ups-eaton-9e1000i.html" },
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-eaton-9e-1000i-6289089/" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/9E1000I" },
+        { "shop": "empik", "kind": "shop", "url": "https://www.empik.com/zasilacz-awaryjny-ups-interaktywny-eaton-9e1000i-800-w-1000-va-eaton,p1559563787,elektronika-p" }
+      ]
+    },
+    {
+      "id": "9e1000ir",
+      "name": "Eaton 9E 1000i Rack 2U",
+      "brand": "Eaton",
+      "ean": ["3553340710339"],
+      "matchTokens": ["9e1000ir"],
+      "rejectTokens": ["9e3000ir", "9e2000ir"],
+      "topology": "online",
+      "form": "rack 2U",
+      "size": "438 x 87 x 438 mm, 17,6 kg",
+      "runtime200W": { "minutes": 28, "method": "wykres producenta, przeskalowany", "note": "Wykres Eatona identyczny z 9SX (3x 12 V 9 Ah, 35,8 min), a 9E1000IR ma 3x 12 V 7 Ah. Do zl/min biore dolna granice 28 min." },
+      "baseline": 2300,
+      "hardThreshold": 2100,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.9E1000IR.html",
+      "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 4x IEC C13. Na x-kom strona 1264797 ma w tytule 9E1000IR, ale to 3000 VA - nie uzywac.",
+      "sources": [
+        { "shop": "x-kom", "kind": "shop", "url": "https://www.x-kom.pl/p/1264795-zasilacz-awaryjny-ups-eaton-ups-9e1000ir-1000va-900w-rack-2u.html" },
+        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/906450/zasilacz-ups-eaton-9e1000ir.html" },
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-eaton-9e-1000va-9e1000ir-13259315/" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/9E1000IR" },
+        { "shop": "premiumserwer", "kind": "shop", "url": "https://premiumserwer.pl/product/Zasilacz-awaryjny-UPS-Eaton-9E-1-kVA-900-W-4-x-C13-Double-Conversion-Online/11092" }
+      ]
+    },
+    {
+      "id": "5p1150ig2",
+      "name": "Eaton 5P 1150i G2",
+      "brand": "Eaton",
+      "ean": ["3553340710278"],
+      "matchTokens": ["5p1150ig2"],
+      "rejectTokens": ["5p1150irg2"],
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "150 x 233 x 345 mm, 11 kg",
+      "runtime200W": { "minutes": 34, "method": "wykres producenta", "note": "eg.eaton.com" },
+      "baseline": 2520,
+      "hardThreshold": 2300,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.5P1150IG2.html",
+      "specNote": "1150 VA / 920 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13.",
+      "sources": [
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-eaton-5p-1150i-g2-5p1150ig2-14138990/" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/5P1150IG2" }
+      ]
+    },
+    {
+      "id": "5sc1000i",
+      "name": "Eaton 5SC 1000i",
+      "brand": "Eaton",
+      "ean": [],
+      "matchTokens": ["5sc1000i"],
+      "rejectTokens": ["5sc1000ir"],
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "150 x 210 x 340 mm, 11,1 kg",
+      "runtime200W": { "minutes": 25, "method": "wykres producenta", "note": "eg.eaton.com" },
+      "baseline": 2100,
+      "hardThreshold": 1900,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.5SC1000I.html",
+      "specNote": "1000 VA / 700 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13.",
+      "sources": [
+        { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-eaton-tower/zasilacz-awaryjny-ups-eaton-5sc-5sc1000i-tower-700-w-8-x-iec-c13-1-x-usb-czarny.html", "shipping": 0 },
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-eaton-5sc-1000i-5sc1000i-608241/" },
+        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/Eaton-5SC1000I-5SC-1000VA700W-Line-Interactive-UPS/2425659" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/5SC1000i" },
+        { "shop": "empik", "kind": "shop", "url": "https://www.empik.com/zasilacz-awaryjny-ups-eaton-5sc1000i-twr-1000va-eaton,p1433999763,elektronika-p" }
+      ]
+    },
+    {
+      "id": "smt1000ic",
+      "name": "APC Smart-UPS SMT1000IC",
+      "brand": "APC",
+      "ean": [],
+      "matchTokens": ["smt1000ic"],
+      "rejectTokens": ["smc1000ic", "smt1000rmi2uc"],
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "ok. 170 x 219 x 439 mm, ok. 19 kg",
+      "runtime200W": { "minutes": 37, "method": "szacunek", "note": "Brak wykresu APC dla 200 W. Polowa obciazenia (350 W): 19 min; przeskalowane wykladnikiem 1,2 z krzywych CyberPower." },
+      "baseline": 2600,
+      "hardThreshold": 2350,
+      "specSource": "https://www.se.com/pl/pl/product/SMT1000IC/",
+      "specNote": "1000 VA / 700 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13, SmartConnect.",
+      "sources": [
+        { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-apc-tower/zasilacz-awaryjny-ups-apc-smart-ups-smt1000ic-tower-1000va-700w-8-x-iec-c13-1-x-rj-45-1-x-usb-czarny.html", "shipping": 0 },
+        { "shop": "komputronik", "kind": "shop", "url": "https://www.komputronik.pl/product/677811/apc-smart-smt1000ic.html" },
+        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/APC-SMT1000IC-Smart-UPS-1000VA700W-Line-Interactive-UPS/2668578" },
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-apc-smart-ups-srv-1000-smt1000ic-4914047/" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/SMT1000IC" }
+      ]
+    },
+    {
+      "id": "ols1500ert2ua",
+      "name": "CyberPower OLS1500ERT2UA",
+      "brand": "CyberPower",
+      "ean": ["4711027790282"],
+      "matchTokens": ["ols1500ert2ua"],
+      "rejectTokens": [],
+      "topology": "online",
+      "form": "rack 2U",
+      "size": "438 x 88 x 430 mm, 16,8 kg",
+      "runtime200W": { "minutes": 30, "method": "wykres producenta, niepewny", "note": "Wykres CyberPower jest nierealnie plaski (100 W: 41,5 min, 600 W: 17,4 min). Polowa obciazenia: 15,3 min." },
+      "baseline": 2120,
+      "hardThreshold": 1900,
+      "specSource": "https://www.cyberpower.com/eu/pl/product/sku/ols1500ert2ua",
+      "specNote": "1500 VA / 1350 W, online, czysta sinusoida, USB HID, 8x IEC C13. Wariant -B ma inny EAN - nie jest sledzony.",
+      "sources": [
+        { "shop": "itnes", "kind": "shop", "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-ols1500ert2ua-1500va-900w-topologia-online.html", "shipping": 0 },
+        { "shop": "proshop", "kind": "shop", "url": "https://www.proshop.pl/UPS/CyberPower-OLS1500ERT2UA-1500VA1350W-UPS/3114753" },
+        { "shop": "morele", "kind": "shop", "url": "https://www.morele.net/ups-cyberpower-ols1500ert2ua-13168677/" },
+        { "shop": "senetic", "kind": "shop", "priceIsNet": true, "url": "https://www.senetic.pl/product/OLS1500ERT2UA" },
+        { "shop": "cebit", "kind": "shop", "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-OLS1500ERT2UA-8xC13USBRS232RelayDry-contact/101875" },
+        { "shop": "proline", "kind": "shop", "url": "https://proline.pl/cyberpower-ols1500ert2ua-p7114282" }
+      ]
+    }
+  ]
+}
