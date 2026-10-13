@@ -47,6 +47,8 @@ export function formatAlerts(alerts, ranking = null) {
         ? `ponizej progu ${escapeHtml(fmt(a.threshold))}`
         : null;
     if (why) lines.push(why);
+    if (a.deal) lines.push(escapeHtml(a.deal));
+    if (a.url) lines.push(`👉 <a href="${escapeHtml(a.url)}">otworz oferte (${escapeHtml(a.shop)})</a>`);
 
     if (Number.isFinite(a.perMin)) {
       const total = ranking && ranking.total;

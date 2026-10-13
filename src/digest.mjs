@@ -74,7 +74,9 @@ export function planPriceChanges(products, state, nowMs) {
     lines.push(
       `${arrow} <b>${escapeHtml(p.name)}</b>: ${fmt(prev.price)} → <b>${fmt(cur.price)}</b> ` +
       `(${pctText(prev.price, cur.price)}) @ ${shopLink(cur.shop, cur.url)}\n` +
-      `   ${gapText(cur.price, p.hardThreshold)}${Number.isFinite(p.perMin) ? ` · ${fmtPerMin(p.perMin)}${p.rank ? ` (miejsce ${p.rank})` : ""}` : ""}${note}`,
+      `   ${gapText(cur.price, p.hardThreshold)}${Number.isFinite(p.perMin) ? ` · ${fmtPerMin(p.perMin)}${p.rank ? ` (miejsce ${p.rank})` : ""}` : ""}${note}` +
+      (p.deal ? `\n   ${escapeHtml(p.deal)}` : "") +
+      (cur.url ? `\n   👉 <a href="${escapeHtml(cur.url)}">otworz oferte</a>` : ""),
     );
     updates[key] = now;
   }
@@ -147,6 +149,8 @@ export function formatDailyReport({ snapshot, histories = {}, markets = {}, stop
     const rt = p.runtime200W && p.runtime200W.minutes;
     lines.push(`${p.rank ? p.rank + ". " : ""}<b>${escapeHtml(p.name)}</b>: ${fmt(p.best.price)} @ ${shopLink(p.best.shop, p.best.url)} · ${day}`);
     if (Number.isFinite(p.perMin)) lines.push(`   ${fmtPerMin(p.perMin)} · ${rt} min przy 200 W · ${escapeHtml(p.topology || "")}, ${escapeHtml(p.form || "")}`);
+    if (p.deal) lines.push(`   ${escapeHtml(p.deal)}`);
+    if (p.best.url) lines.push(`   👉 <a href="${escapeHtml(p.best.url)}">otworz oferte</a>`);
     lines.push(`   ${gapText(p.best.price, p.hardThreshold)}${low != null ? ` · minimum obserwacji ${fmt(low)}` : ""}`);
     const m = cheapestMarket(markets[p.id], nowMs);
     if (m) {
@@ -167,7 +171,13 @@ export function formatTestMessage(snapshot, nowMs) {
   const ps = (snapshot && snapshot.products) || [];
   if (ps.length) {
     lines.push("", "Najnizsze ceny z ostatniego skanu:");
-    for (const p of ps) lines.push(`• ${escapeHtml(p.name)}: ${p.best ? fmt(p.best.price) : "brak ceny"}`);
+    const sorted = ps.slice().sort((a, b) => (a.rank || 999) - (b.rank || 999));
+    for (const p of sorted) {
+      if (!p.best) { lines.push(`• ${escapeHtml(p.name)}: brak ceny`); continue; }
+      const link = p.best.url ? `<a href="${escapeHtml(p.best.url)}">${escapeHtml(p.best.shop)}</a>` : escapeHtml(p.best.shop);
+      lines.push(`• ${escapeHtml(p.name)}: <b>${fmt(p.best.price)}</b> @ ${link}${Number.isFinite(p.perMin) ? ` · ${fmtPerMin(p.perMin)}` : ""}`);
+      if (p.deal) lines.push(`   ${escapeHtml(p.deal)}`);
+    }
   }
   return lines.join("\n");
 }

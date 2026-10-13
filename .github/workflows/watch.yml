@@ -190,9 +190,9 @@ jobs:
             const pm = (n) => n == null ? "—" : Number(n).toLocaleString("pl-PL", { maximumFractionDigits: 1 }) + " zl/min";
             const cell = (s) => String(s == null ? "" : s).replace(/\|/g, "/");
             const L = [];
-            L.push("| Model | Cena | Sklep | Dlaczego alert | Zl/min przy 200 W | Baza |", "|---|---|---|---|---|---|");
+            L.push("| Model | Cena | Sklep | Dlaczego alert | Na tle rynku | Zl/min przy 200 W | Oferta |", "|---|---|---|---|---|---|---|");
             for (const a of d.alerts) {
-              L.push(`| [${cell(a.name)}](${a.url}) | **${zl(a.price)}** | ${cell(a.shop)}${a.variant ? " (" + cell(a.variant) + ")" : ""} | ${cell(a.reasons.map(r => r.text).join(" · "))} | ${pm(a.perMin)}${a.rank ? ", miejsce " + a.rank + "/" + d.ranking.total : ""} | ${zl(a.baseline)} |`);
+              L.push(`| ${cell(a.name)} | **${zl(a.price)}** | ${cell(a.shop)}${a.variant ? " (" + cell(a.variant) + ")" : ""} | ${cell(a.reasons.map(r => r.text).join(" · "))} | ${cell(a.deal || "")} | ${pm(a.perMin)}${a.rank ? ", miejsce " + a.rank + "/" + d.ranking.total : ""} | ${a.url ? "[otworz](" + a.url + ")" : "—"} |`);
             }
             const b = d.ranking && d.ranking.best;
             if (b) L.push("", `**Najtaniej za minute na calej liscie:** [${cell(b.name)}](${b.url}) — ${pm(b.perMin)} (${zl(b.price)} @ ${cell(b.shop)})`);

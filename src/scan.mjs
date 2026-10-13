@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { scrapeSource } from "./adapters/index.mjs";
 import { closeBrowser } from "./fetch.mjs";
-import { evaluate, effectiveCost, fmt, perMinute, rankByPerMinute } from "./alerts.mjs";
+import { evaluate, effectiveCost, fmt, perMinute, rankByPerMinute, dealContext, nextOffer } from "./alerts.mjs";
 import { isStopped } from "./lifetime.mjs";
 import { ensureDirs, readJson, writeJson, loadHistory, saveHistory, DATA_DIR } from "./store.mjs";
 import { localHealth, describeHealth, localAlertsForSnapshot, LOCAL_STATUS, DEFAULT_STALE_HOURS } from "./localstatus.mjs";
@@ -102,6 +102,8 @@ for (const product of products) {
   const withCost = offers
     .map((o) => ({ ...o, ...effectiveCost(o) }))
     .sort((a, b) => a.price - b.price);
+  const next = nextOffer(offers, best);
+  const deal = best ? dealContext({ price: best.price, baseline: product.baseline, median: verdict.stats.median, next }) : "";
 
   snapshot.products.push({
     id: product.id,
@@ -118,6 +120,8 @@ for (const product of products) {
     size: product.size,
     runtime200W: product.runtime200W || null,
     perMin: best ? perMinute(best.price, product) : null,
+    next,
+    deal,
     best: entry.best,
     offers: withCost,
     sources: sourceReports,
@@ -136,6 +140,8 @@ for (const product of products) {
       variant: best.variant || null,
       url: best.url,
       perMin: perMinute(best.price, product),
+      next,
+      deal,
       effective: effectiveCost(best),
       reasons: verdict.reasons,
       baseline: product.baseline,

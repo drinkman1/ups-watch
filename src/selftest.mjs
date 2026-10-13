@@ -11,7 +11,7 @@ import {
 } from "./extract.mjs";
 import { parseAggregatorRows, scrapeSource, detectInterstitial } from "./adapters/index.mjs";
 import { FIXTURE_DIR, fixtureName, fixtureFetcher, loadFixture, summarize } from "./save-fixtures.mjs";
-import { evaluate, median, allTimeLow, windowPrices, effectiveCost, fmt, DAY, perMinute, rankByPerMinute } from "./alerts.mjs";
+import { evaluate, median, allTimeLow, windowPrices, effectiveCost, fmt, DAY, perMinute, rankByPerMinute, dealContext, nextOffer, pctDiff } from "./alerts.mjs";
 import { isStopped, daysLeft } from "./lifetime.mjs";
 import { extractBlock, validate, marketAlerts } from "./ingest.mjs";
 import {
@@ -1244,6 +1244,31 @@ await ta("senetic: cena netto z JSON-LD przeliczona na brutto (priceIsNet)", asy
   eq(net.offers[0].price, 2646.57);
   const gross = await scrapeSource(P, { shop: "inny", kind: "shop", url: "https://x" }, { fetcher });
   eq(gross.offers[0].price, 2151.68);
+});
+
+t("okazja: procent vs baza, mediana i nastepna oferta", () => {
+  eq(pctDiff(906, 1450), -37.5);
+  eq(pctDiff(1000, 1000), 0);
+  const nx = nextOffer([{ shop: "morele", price: 906 }, { shop: "morele", price: 950 }, { shop: "itnes", price: 937 }, { shop: "empik", price: 1051 }], { shop: "morele", price: 906 });
+  eq(nx, { price: 937, shop: "itnes", url: null });
+  eq(nextOffer([{ shop: "morele", price: 906 }], { shop: "morele", price: 906 }), null);
+  const s = dealContext({ price: 906, baseline: 1450, median: null, next: nx });
+  truthy(s.includes("−37,5% vs cena bazowa") && s.includes("−3,3% vs nastepna oferta") && !s.includes("mediana"), s);
+  truthy(dealContext({ price: 900, baseline: 1000, median: 1000 }).includes("−10% vs mediana 30 dni"));
+});
+
+t("telegram: alert ma wyrazny link do oferty i kontekst cenowy", () => {
+  const msg = formatAlerts([{ name: "CyberPower OLS1000EA", price: 906, shop: "morele", url: "https://www.morele.net/x/", deal: "−37,5% vs cena bazowa 1450 zl", reasons: [] }]);
+  truthy(msg.includes('👉 <a href="https://www.morele.net/x/">otworz oferte (morele)</a>') && msg.includes("−37,5% vs cena bazowa"), msg);
+});
+
+t("telegram: test i raport dzienny maja linki do ofert", () => {
+  const p = { id: "a", name: "CyberPower OLS1000EA", rank: 1, perMin: 25.9, deal: "−37,5% vs cena bazowa", hardThreshold: 1000,
+    best: { price: 906, shop: "morele", url: "https://www.morele.net/x/" }, runtime200W: { minutes: 35 }, topology: "online", form: "tower" };
+  const t1 = formatTestMessage({ products: [p] }, NOW);
+  truthy(t1.includes('<a href="https://www.morele.net/x/">morele</a>') && t1.includes("−37,5%"), t1);
+  const t2 = formatDailyReport({ snapshot: { products: [p] }, nowMs: NOW });
+  truthy(t2.includes("otworz oferte") && t2.includes("−37,5%"), t2);
 });
 
 // --- podsumowanie -----------------------------------------------------------

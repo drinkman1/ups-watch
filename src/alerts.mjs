@@ -124,3 +124,40 @@ export function fmtPerMin(v) {
   if (!Number.isFinite(v)) return "-";
   return v.toLocaleString("pl-PL", { minimumFractionDigits: 0, maximumFractionDigits: 1 }) + " zl/min";
 }
+
+// Roznica procentowa ceny wzgledem punktu odniesienia; ujemna = taniej.
+export function pctDiff(price, ref) {
+  if (!Number.isFinite(price) || !Number.isFinite(ref) || ref <= 0) return null;
+  return Math.round((price / ref - 1) * 1000) / 10;
+}
+
+function signed(v) {
+  if (v === 0) return "±0%";
+  return (v > 0 ? "+" : "−") + Math.abs(v).toLocaleString("pl-PL") + "%";
+}
+
+// "Czy to naprawde okazja" w jednej linii, trzy punkty odniesienia:
+//   baza    - cena rynkowa z researchu (13.10.2026), stala przez caly okres,
+//   mediana - mediana z 30 dni, gdy jest juz z czego ja liczyc,
+//   next    - nastepna najtansza oferta w INNYM sklepie w tym samym przebiegu.
+// Ostatnia mowi najwiecej: -2% vs nastepna oferta to zwykla cena rynkowa,
+// -25% to albo prawdziwa promocja, albo blad sklepu - warto kliknac.
+export function dealContext({ price, baseline = null, median = null, next = null } = {}) {
+  const parts = [];
+  const b = pctDiff(price, baseline);
+  if (b != null) parts.push(`${signed(b)} vs cena bazowa ${fmt(baseline)}`);
+  const m = pctDiff(price, median);
+  if (m != null) parts.push(`${signed(m)} vs mediana 30 dni`);
+  const n = next ? pctDiff(price, next.price) : null;
+  if (n != null) parts.push(`${signed(n)} vs nastepna oferta (${fmt(next.price)}, ${next.shop})`);
+  return parts.join(" · ");
+}
+
+// Nastepna najtansza oferta z innego sklepu niz najtansza. `offers` dowolnie
+// posortowane; zwraca null, gdy cene ma tylko jeden sklep.
+export function nextOffer(offers, best) {
+  if (!best) return null;
+  const rest = (offers || []).filter((o) => o.shop !== best.shop && Number.isFinite(o.price))
+    .sort((a, b) => a.price - b.price);
+  return rest.length ? { price: rest[0].price, shop: rest[0].shop, url: rest[0].url || null } : null;
+}
