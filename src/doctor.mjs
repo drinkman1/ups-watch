@@ -146,9 +146,11 @@ export async function runDoctor({ repo, cfg, nowMs = Date.now() }) {
     : { level: FAIL, name: "Dostep do GitHuba (zapis)", detail: "push odrzucony: " + push.out.split("\n")[0] + " - zaloguj sie: git push z tego katalogu i podaj login w oknie Git Credential Manager" });
 
   add({ level: INFO, name: "Telegram",
-    detail: process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID
-      ? "zmienne ustawione - awaria toru B da wiadomosc"
-      : "brak TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID - tor B nie powiadomi sam o awarii (tor A i tak zauwazy cisze)" });
+    detail: process.env.UPS_WATCH_TELEGRAM_BOT_TOKEN && (process.env.UPS_WATCH_TELEGRAM_CHAT_ID || process.env.TELEGRAM_CHAT_ID)
+      ? "UPS_WATCH_TELEGRAM_* ustawione - tor B pisze botem ups-watch"
+      : process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID
+        ? "tylko wspolne TELEGRAM_* - na tym laptopie to bot car-watch; ustaw UPS_WATCH_TELEGRAM_BOT_TOKEN"
+        : "brak zmiennych Telegrama - tor B nie powiadomi sam o awarii (tor A i tak zauwazy cisze)" });
 
   if (process.platform === "win32") {
     // -EncodedCommand (UTF-16LE w base64): zadnych cudzyslowow do przepychania

@@ -203,9 +203,13 @@ if (alerts.length) {
 // Telegram - ten sam modul co tor A. Alert idzie od razu; tor A wysle go
 // potem tylko jako Issue (flaga telegramSent). Sygnal o awarii leci tylko przy
 // calkowitej porazce (zero ofert), z lista zrodel, ktore nie oddaly ceny.
-if (process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID) {
+// Na tym laptopie TELEGRAM_BOT_TOKEN nalezy do car-watch (bot Forestera).
+// ups-watch bierze najpierw wlasne UPS_WATCH_TELEGRAM_*, a wspolne tylko awaryjnie.
+const tgToken = process.env.UPS_WATCH_TELEGRAM_BOT_TOKEN || process.env.TELEGRAM_BOT_TOKEN;
+const tgChat = process.env.UPS_WATCH_TELEGRAM_CHAT_ID || process.env.TELEGRAM_CHAT_ID;
+if (tgToken && tgChat) {
   const { planMessages, sendTelegram, formatAlerts } = await import("./telegram.mjs");
-  const creds = { token: process.env.TELEGRAM_BOT_TOKEN, chatId: process.env.TELEGRAM_CHAT_ID };
+  const creds = { token: tgToken, chatId: tgChat };
   const alertMsg = formatAlerts(alerts);
   const msgs = [];
   if (alertMsg) msgs.push({ text: alertMsg, isAlert: true });

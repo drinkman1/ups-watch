@@ -94,7 +94,12 @@ z innymi botami.
 | **Test** | ręcznie: Actions → „telegram test” → Run workflow | na żądanie |
 
 Sekrety (Settings → Secrets and variables → Actions): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`.
-Te same wartości co w gen-watch. Bez sekretów krok Telegrama cicho się pomija, a Issue działa dalej.
+Token bota `Agregaty_bot` z gen-watch (@BotFather → /mybots → API Token), chat_id ten sam.
+Bez sekretów krok Telegrama cicho się pomija, a Issue działa dalej.
+
+**Uwaga na laptopie:** zmienne Windows `TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` należą do
+car-watch (bot Forestera). Tor B ups-watch czyta najpierw `UPS_WATCH_TELEGRAM_BOT_TOKEN`
+i `UPS_WATCH_TELEGRAM_CHAT_ID`, a wspólne zmienne tylko wtedy, gdy własnych nie ma.
 
 ## 30 dni i koniec
 
