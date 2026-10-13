@@ -249,7 +249,7 @@ const esc = (s) => String(s==null?"":s).replace(/[&<>"']/g, c =>
       + '<td class="opt">' + (b ? esc(b.shop) + (b.variant ? ' <span class="flag">' + esc(b.variant) + '</span>' : '') : '') + '</td>'
       + '<td class="num"><span class="bar" style="width:' + w + 'px"></span>' + (p.perMin != null ? p.perMin.toLocaleString("pl-PL",{maximumFractionDigits:1}) : '—') + '</td>'
       + '<td class="num opt">' + zl(p.threshold) + '</td>'
-      + '<td class="num ' + (gap != null && gap < 0 ? 'bad' : '') + '">' + (gap == null ? '—' : gap < 0 ? 'ponizej progu' : '+' + gap.toFixed(1) + '%') + '</td>'
+      + '<td class="num ' + (gap != null && gap < 0 ? 'bad' : '') + '">' + (gap == null ? '—' : gap < 0 ? 'ponizej progu' : '+' + gap.toLocaleString("pl-PL",{maximumFractionDigits:1}) + '%') + '</td>'
       + '</tr>';
   }).join("");
   el.innerHTML = '<h2>Najtaniej za minute podtrzymania przy ' + D.loadWatts + ' W</h2>'
@@ -262,6 +262,17 @@ const esc = (s) => String(s==null?"":s).replace(/[&<>"']/g, c =>
 // --- baner alertow ---------------------------------------------------------
 (function(){
   const el = document.getElementById("banner");
+  // Ponizej progu, ale bez alertu: pierwszy przebieg (baseline) albo ta sama
+  // cena w oknie ciszy 24 h. Baner nie moze wtedy mowic "wszystko powyzej".
+  const under = D.panels.filter(p => p.best && p.best.price < p.threshold);
+  if (!D.alerts.length && under.length){
+    el.innerHTML = '<div class="banner hit"><div class="ttl">'
+      + '<span class="dot" style="background:var(--warning)"></span>Ponizej progu: ' + under.length + '</div>'
+      + '<div style="color:var(--ink-2)">' + under.map(p => '<b>' + esc(p.name) + '</b> ' + zl(p.best.price)
+        + ' (prog ' + zl(p.threshold) + ', ' + esc(p.best.shop) + ')').join(' · ')
+      + '. Bez alertu w tym przebiegu: pierwszy pomiar albo ta sama cena zgloszona w ciagu ' + D.rules.realertAfterHours + ' h.</div></div>';
+    return;
+  }
   if (!D.alerts.length){
     el.innerHTML = '<div class="banner"><div class="ttl">'
       + '<span class="dot" style="background:var(--good)"></span>Zadnej okazji</div>'
