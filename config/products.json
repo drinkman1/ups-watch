@@ -35,7 +35,7 @@
       "size": "140 x 191 x 327 mm, 9,4 kg",
       "runtime200W": { "minutes": 35, "method": "wykres producenta", "note": "180 W: 38,7 min, 270 W: 23,5 min" },
       "baseline": 1450,
-      "hardThreshold": 1000,
+      "hardThreshold": 880,
       "specSource": "https://www.cyberpower.com/global/en/product/sku/ols1000ea",
       "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 4x IEC C13 (-DE: Schuko).",
       "sources": [
@@ -229,7 +229,7 @@
       "size": "438 x 88 x 430 mm, 16,8 kg",
       "runtime200W": { "minutes": 30, "method": "wykres producenta, niepewny", "note": "Wykres CyberPower jest nierealnie plaski (100 W: 41,5 min, 600 W: 17,4 min). Polowa obciazenia: 15,3 min." },
       "baseline": 2120,
-      "hardThreshold": 1900,
+      "hardThreshold": 1550,
       "specSource": "https://www.cyberpower.com/eu/pl/product/sku/ols1500ert2ua",
       "specNote": "1500 VA / 1350 W, online, czysta sinusoida, USB HID, 8x IEC C13. Wariant -B ma inny EAN - nie jest sledzony.",
       "sources": [

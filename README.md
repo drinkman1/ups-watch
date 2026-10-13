@@ -22,7 +22,7 @@ o głębokości 450–600 mm. Tylko nowe egzemplarze.
 
 | Model | Typ | Obudowa | Min przy 200 W | Baza | Próg |
 |---|---|---|---|---|---|
-| CyberPower OLS1000EA / -DE | online | tower | 35 | 1 450 zł | < 1 000 zł |
+| CyberPower OLS1000EA / -DE | online | tower | 35 | 1 450 zł | < 880 zł |
 | CyberPower PR1000ELCD | line-interactive | tower | 49 | 1 840 zł | < 1 650 zł |
 | CyberPower PR1000ERT2U | line-interactive | rack 2U | 66 | 2 640 zł | < 2 400 zł |
 | CyberPower OLS1000ERT2UA | online | rack 2U | 35 | 2 330 zł | < 2 100 zł |
@@ -31,7 +31,7 @@ o głębokości 450–600 mm. Tylko nowe egzemplarze.
 | Eaton 5P 1150i G2 | line-interactive | tower | 34 | 2 520 zł | < 2 300 zł |
 | Eaton 5SC 1000i | line-interactive | tower | 25 | 2 100 zł | < 1 900 zł |
 | APC Smart-UPS SMT1000IC | line-interactive | tower | ~37 (szac.) | 2 600 zł | < 2 350 zł |
-| CyberPower OLS1500ERT2UA | online | rack 2U | 30 (niepewne) | 2 120 zł | < 1 900 zł |
+| CyberPower OLS1500ERT2UA | online | rack 2U | 30 (niepewne) | 2 120 zł | < 1 550 zł |
 
 Czas przy 200 W pochodzi z wykresów producenta, interpolowany między punktami:
 CyberPower publikuje krzywą w kodzie strony produktu, Eaton na `eg.eaton.com/ups-battery-runtime/`.
