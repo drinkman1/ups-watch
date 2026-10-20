@@ -1,0 +1,1418 @@
+{
+  "generatedAt": "2026-10-20T00:27:35.121Z",
+  "products": [
+    {
+      "id": "ols1000ea",
+      "name": "CyberPower OLS1000EA",
+      "brand": "CyberPower",
+      "ean": [
+        "4711027790190"
+      ],
+      "baseline": 1450,
+      "hardThreshold": 880,
+      "specSource": "https://www.cyberpower.com/global/en/product/sku/ols1000ea",
+      "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 4x IEC C13 (-DE: Schuko).",
+      "variantNote": "Scalone jawnie: OLS1000EA (4x IEC C13) i OLS1000EA-DE (gniazda Schuko). Elektronika i baterie te same, roznia sie gniazdami - wariant jest przy kazdej ofercie.",
+      "topology": "online",
+      "form": "tower",
+      "size": "140 x 191 x 327 mm, 9,4 kg",
+      "runtime200W": {
+        "minutes": 35,
+        "method": "wykres producenta",
+        "note": "180 W: 38,7 min, 270 W: 23,5 min"
+      },
+      "perMin": 25.8,
+      "next": {
+        "price": 932,
+        "shop": "itnes",
+        "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-1000va-900w-topologia-online.html"
+      },
+      "deal": "−37,8% vs cena bazowa 1450 zl · ±0% vs mediana 30 dni · −3,2% vs nastepna oferta (932 zl, itnes)",
+      "best": {
+        "shop": "morele",
+        "price": 902.24,
+        "url": "https://www.morele.net/ups-cyberpower-main-stream-online-1000va-ols1000ea-de-8387937/",
+        "availability": "dostepny",
+        "variant": "-DE (Schuko)"
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 902.24,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-cyberpower-main-stream-online-1000va-ols1000ea-de-8387937/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": "-DE (Schuko)",
+          "cost": 902.24,
+          "shippingKnown": false
+        },
+        {
+          "shop": "itnes",
+          "price": 932,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-1000va-900w-topologia-online.html",
+          "method": "jsonld",
+          "shipping": 0,
+          "discountPct": 0,
+          "note": null,
+          "variant": "-DE (Schuko)",
+          "cost": 932,
+          "shippingKnown": true
+        },
+        {
+          "shop": "empik",
+          "price": 1044.99,
+          "currency": "PLN",
+          "availability": null,
+          "url": "https://www.empik.com/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-cyberpower,p1535509969,elektronika-p",
+          "method": "meta",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": "-DE (Schuko)",
+          "cost": 1044.99,
+          "shippingKnown": false
+        },
+        {
+          "shop": "sferis",
+          "price": 1455.92,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.sferis.pl/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-i391716",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": "-DE (Schuko)",
+          "cost": 1455.92,
+          "shippingKnown": false
+        },
+        {
+          "shop": "proline",
+          "price": 1519,
+          "currency": "PLN",
+          "availability": "na zamowienie",
+          "url": "https://proline.pl/cyberpower-ups-ols1000ea-1000va-900w-p8077557",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1519,
+          "shippingKnown": false
+        },
+        {
+          "shop": "itnes-iec",
+          "price": 1776,
+          "currency": "PLN",
+          "availability": "brak",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-awaryjny-ups-cyberpower-ols1000ea-1000va-900w-topologia-online.html",
+          "method": "jsonld",
+          "shipping": 0,
+          "discountPct": 0,
+          "note": null,
+          "variant": "IEC C13",
+          "cost": 1776,
+          "shippingKnown": true
+        },
+        {
+          "shop": "senetic",
+          "price": 1803.08,
+          "currency": "PLN",
+          "availability": "brak",
+          "url": "https://www.senetic.pl/product/OLS1000EA",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": "IEC C13",
+          "cost": 1803.08,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "itnes",
+          "kind": "shop",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-1000va-900w-topologia-online.html",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1313,
+          "issues": []
+        },
+        {
+          "shop": "itnes-iec",
+          "kind": "shop",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-awaryjny-ups-cyberpower-ols1000ea-1000va-900w-topologia-online.html",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 583,
+          "issues": []
+        },
+        {
+          "shop": "sferis",
+          "kind": "shop",
+          "url": "https://www.sferis.pl/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-i391716",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1408,
+          "issues": []
+        },
+        {
+          "shop": "proline",
+          "kind": "shop",
+          "url": "https://proline.pl/cyberpower-ups-ols1000ea-1000va-900w-p8077557",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 4865,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/OLS1000EA",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 755,
+          "issues": [
+            "cena netto ze strony (1465.92) przeliczona na brutto"
+          ]
+        },
+        {
+          "shop": "empik",
+          "kind": "shop",
+          "url": "https://www.empik.com/zasilacz-awaryjny-ups-cyberpower-ols1000ea-de-cyberpower,p1535509969,elektronika-p",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 16875,
+          "issues": [
+            "zwykly fetch odbity (403), poszlo przez Chromium"
+          ]
+        },
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-cyberpower-main-stream-online-1000va-ols1000ea-de-8387937/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1287,
+          "issues": []
+        }
+      ],
+      "stats": {
+        "median": 902.01,
+        "allTimeLow": 901.38,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 1
+    },
+    {
+      "id": "pr1000elcd",
+      "name": "CyberPower PR1000ELCD",
+      "brand": "CyberPower",
+      "ean": [
+        "4712364143809"
+      ],
+      "baseline": 1840,
+      "hardThreshold": 1650,
+      "specSource": "https://www.cyberpower.com/global/en/product/sku/pr1000elcd",
+      "specNote": "1000 VA / 900 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13, 2x 12 V 12 Ah.",
+      "variantNote": null,
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "170 x 221 x 432 mm, 18,9 kg",
+      "runtime200W": {
+        "minutes": 49,
+        "method": "wykres producenta",
+        "note": "200 W to punkt wykresu"
+      },
+      "perMin": 37.2,
+      "next": {
+        "price": 2029,
+        "shop": "itnes",
+        "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-ups-cyberpower-pr1000elcd-1000va-900w-topologia-line-interactive.html"
+      },
+      "deal": "−1% vs cena bazowa 1840 zl · −0,5% vs mediana 30 dni · −10,3% vs nastepna oferta (2029 zl, itnes)",
+      "best": {
+        "shop": "morele",
+        "price": 1820.87,
+        "url": "https://www.morele.net/ups-cyberpower-pr1000elcd-ups-1000va-900w-580609/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 1820.87,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-cyberpower-pr1000elcd-ups-1000va-900w-580609/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1820.87,
+          "shippingKnown": false
+        },
+        {
+          "shop": "itnes",
+          "price": 2029,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-ups-cyberpower-pr1000elcd-1000va-900w-topologia-line-interactive.html",
+          "method": "jsonld",
+          "shipping": 0,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2029,
+          "shippingKnown": true
+        },
+        {
+          "shop": "senetic",
+          "price": 2065,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/PR1000ELCD",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2065,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-cyberpower-pr1000elcd-ups-1000va-900w-580609/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1359,
+          "issues": []
+        },
+        {
+          "shop": "itnes",
+          "kind": "shop",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-tower/zasilacz-ups-cyberpower-pr1000elcd-1000va-900w-topologia-line-interactive.html",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1042,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/PR1000ELCD",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 622,
+          "issues": [
+            "cena netto ze strony (1678.86) przeliczona na brutto"
+          ]
+        }
+      ],
+      "stats": {
+        "median": 1829.11,
+        "allTimeLow": 1820.87,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 3
+    },
+    {
+      "id": "pr1000ert2u",
+      "name": "CyberPower PR1000ERT2U",
+      "brand": "CyberPower",
+      "ean": [
+        "4712856277623"
+      ],
+      "baseline": 2640,
+      "hardThreshold": 2400,
+      "specSource": "https://www.cyberpower.com/eu/pl/product/sku/pr1000ert2u",
+      "specNote": "1000 VA / 1000 W, line-interactive, czysta sinusoida, USB HID, 10x IEC C13. Waga 22,4 kg - sprawdz nosnosc szafy wiszacej.",
+      "variantNote": null,
+      "topology": "line-interactive",
+      "form": "rack 2U",
+      "size": "433 x 87 x 412 mm, 22,4 kg",
+      "runtime200W": {
+        "minutes": 66,
+        "method": "wykres producenta",
+        "note": "200 W to punkt wykresu; najdluzej z modeli rack"
+      },
+      "perMin": 39.9,
+      "next": {
+        "price": 2636.64,
+        "shop": "morele",
+        "url": "https://www.morele.net/ups-cyberpower-pr1000ert2u-6055508/"
+      },
+      "deal": "−0,2% vs cena bazowa 2640 zl · ±0% vs mediana 30 dni · ±0% vs nastepna oferta (2636,64 zl, morele)",
+      "best": {
+        "shop": "sferis",
+        "price": 2635.71,
+        "url": "https://www.sferis.pl/zasilacz-ups-cyberpower-pr1000ert2u-i195252",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "sferis",
+          "price": 2635.71,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.sferis.pl/zasilacz-ups-cyberpower-pr1000ert2u-i195252",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2635.71,
+          "shippingKnown": false
+        },
+        {
+          "shop": "morele",
+          "price": 2636.64,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-cyberpower-pr1000ert2u-6055508/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2636.64,
+          "shippingKnown": false
+        },
+        {
+          "shop": "itnes",
+          "price": 2897,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-pr1000ert2u-1000va-1000w-topologia-line-interactive.html",
+          "method": "jsonld",
+          "shipping": 0,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2897,
+          "shippingKnown": true
+        },
+        {
+          "shop": "senetic",
+          "price": 2982,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/PR1000ERT2U",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2982,
+          "shippingKnown": false
+        },
+        {
+          "shop": "cebit",
+          "price": 3077.49,
+          "currency": "PLN",
+          "availability": null,
+          "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-PR1000ERT2U/101868",
+          "method": "meta",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 3077.49,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "sferis",
+          "kind": "shop",
+          "url": "https://www.sferis.pl/zasilacz-ups-cyberpower-pr1000ert2u-i195252",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1134,
+          "issues": []
+        },
+        {
+          "shop": "itnes",
+          "kind": "shop",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-pr1000ert2u-1000va-1000w-topologia-line-interactive.html",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 800,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/PR1000ERT2U",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 366,
+          "issues": [
+            "cena netto ze strony (2424.39) przeliczona na brutto"
+          ]
+        },
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-cyberpower-pr1000ert2u-6055508/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 980,
+          "issues": []
+        },
+        {
+          "shop": "cebit",
+          "kind": "shop",
+          "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-PR1000ERT2U/101868",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1367,
+          "issues": []
+        }
+      ],
+      "stats": {
+        "median": 2635.71,
+        "allTimeLow": 2635.71,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 4
+    },
+    {
+      "id": "ols1000ert2ua",
+      "name": "CyberPower OLS1000ERT2UA",
+      "brand": "CyberPower",
+      "ean": [
+        "4712856273809"
+      ],
+      "baseline": 2330,
+      "hardThreshold": 2100,
+      "specSource": "https://www.cyberpower.com/global/en/product/sku/ols1000ert2ua",
+      "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 8x IEC C13. Wariant OLS1000ERT2UA-B ma inny EAN - nie jest sledzony.",
+      "variantNote": null,
+      "topology": "online",
+      "form": "rack 2U",
+      "size": "438 x 88 x 430 mm, 13,5 kg",
+      "runtime200W": {
+        "minutes": 35,
+        "method": "wykres producenta",
+        "note": "ta sama krzywa co OLS1000EA"
+      },
+      "perMin": 37.1,
+      "next": {
+        "price": 2310,
+        "shop": "senetic",
+        "url": "https://www.senetic.pl/product/OLS1000ERT2UA"
+      },
+      "deal": "−44,3% vs cena bazowa 2330 zl · −42,8% vs mediana 30 dni · −43,8% vs nastepna oferta (2310 zl, senetic)",
+      "best": {
+        "shop": "morele",
+        "price": 1297.91,
+        "url": "https://www.morele.net/ups-cyberpower-ols1000ert2ua-13168676/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 1297.91,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-cyberpower-ols1000ert2ua-13168676/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1297.91,
+          "shippingKnown": false
+        },
+        {
+          "shop": "senetic",
+          "price": 2310,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/OLS1000ERT2UA",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2310,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-cyberpower-ols1000ert2ua-13168676/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 995,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/OLS1000ERT2UA",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 290,
+          "issues": [
+            "cena netto ze strony (1878.05) przeliczona na brutto"
+          ]
+        }
+      ],
+      "stats": {
+        "median": 2267.6,
+        "allTimeLow": 1297.91,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": true,
+      "historyPoints": 29,
+      "rank": 2
+    },
+    {
+      "id": "9e1000i",
+      "name": "Eaton 9E 1000i",
+      "brand": "Eaton",
+      "ean": [],
+      "baseline": 1770,
+      "hardThreshold": 1600,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.9E1000I.html",
+      "specNote": "1000 VA / 800 W, online, czysta sinusoida, USB HID, 4x IEC C13.",
+      "variantNote": null,
+      "topology": "online",
+      "form": "tower",
+      "size": "144 x 228 x 356 mm, 9,5 kg",
+      "runtime200W": {
+        "minutes": 25,
+        "method": "wykres producenta",
+        "note": "eg.eaton.com, 2x 12 V 9 Ah"
+      },
+      "perMin": 72.1,
+      "next": {
+        "price": 1772,
+        "shop": "netland24",
+        "url": "https://netland24.pl/sklep/636785/UPS-EATON-9E1000I-Eaton-UPS-9E-1000i"
+      },
+      "deal": "+1,8% vs cena bazowa 1770 zl · +1,7% vs mediana 30 dni · +1,7% vs nastepna oferta (1772 zl, netland24)",
+      "best": {
+        "shop": "morele",
+        "price": 1801.6,
+        "url": "https://www.morele.net/ups-eaton-9e-1000i-6289089/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "netland24",
+          "price": 1772,
+          "currency": "PLN",
+          "availability": "brak",
+          "url": "https://netland24.pl/sklep/636785/UPS-EATON-9E1000I-Eaton-UPS-9E-1000i",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1772,
+          "shippingKnown": false
+        },
+        {
+          "shop": "morele",
+          "price": 1801.6,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-eaton-9e-1000i-6289089/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1801.6,
+          "shippingKnown": false
+        },
+        {
+          "shop": "senetic",
+          "price": 1824.71,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/9E1000I",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1824.71,
+          "shippingKnown": false
+        },
+        {
+          "shop": "empik",
+          "price": 1984.86,
+          "currency": "PLN",
+          "availability": null,
+          "url": "https://www.empik.com/zasilacz-awaryjny-ups-interaktywny-eaton-9e1000i-800-w-1000-va-eaton,p1559563787,elektronika-p",
+          "method": "meta",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1984.86,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "netland24",
+          "kind": "shop",
+          "url": "https://netland24.pl/sklep/636785/UPS-EATON-9E1000I-Eaton-UPS-9E-1000i",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1054,
+          "issues": []
+        },
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-eaton-9e-1000i-6289089/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1200,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/9E1000I",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 304,
+          "issues": [
+            "cena netto ze strony (1483.5) przeliczona na brutto"
+          ]
+        },
+        {
+          "shop": "empik",
+          "kind": "shop",
+          "url": "https://www.empik.com/zasilacz-awaryjny-ups-interaktywny-eaton-9e1000i-800-w-1000-va-eaton,p1559563787,elektronika-p",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 2819,
+          "issues": [
+            "zwykly fetch odbity (403), poszlo przez Chromium"
+          ]
+        }
+      ],
+      "stats": {
+        "median": 1772,
+        "allTimeLow": 1772,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 6
+    },
+    {
+      "id": "9e1000ir",
+      "name": "Eaton 9E 1000i Rack 2U",
+      "brand": "Eaton",
+      "ean": [
+        "3553340710339"
+      ],
+      "baseline": 2300,
+      "hardThreshold": 2100,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.9E1000IR.html",
+      "specNote": "1000 VA / 900 W, online, czysta sinusoida, USB HID, 4x IEC C13. Na x-kom strona 1264797 ma w tytule 9E1000IR, ale to 3000 VA - nie uzywac.",
+      "variantNote": null,
+      "topology": "online",
+      "form": "rack 2U",
+      "size": "438 x 87 x 438 mm, 17,6 kg",
+      "runtime200W": {
+        "minutes": 28,
+        "method": "wykres producenta, przeskalowany",
+        "note": "Wykres Eatona identyczny z 9SX (3x 12 V 9 Ah, 35,8 min), a 9E1000IR ma 3x 12 V 7 Ah. Do zl/min biore dolna granice 28 min."
+      },
+      "perMin": 84.6,
+      "next": {
+        "price": 2634.68,
+        "shop": "senetic",
+        "url": "https://www.senetic.pl/product/9E1000IR"
+      },
+      "deal": "+3% vs cena bazowa 2300 zl · −0,1% vs mediana 30 dni · −10,1% vs nastepna oferta (2634,68 zl, senetic)",
+      "best": {
+        "shop": "morele",
+        "price": 2368.86,
+        "url": "https://www.morele.net/ups-eaton-9e-1000va-9e1000ir-13259315/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 2368.86,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-eaton-9e-1000va-9e1000ir-13259315/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2368.86,
+          "shippingKnown": false
+        },
+        {
+          "shop": "senetic",
+          "price": 2634.68,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/9E1000IR",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2634.68,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-eaton-9e-1000va-9e1000ir-13259315/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1183,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/9E1000IR",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 689,
+          "issues": [
+            "cena netto ze strony (2142.02) przeliczona na brutto"
+          ]
+        }
+      ],
+      "stats": {
+        "median": 2370.44,
+        "allTimeLow": 2368.86,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 10
+    },
+    {
+      "id": "5p1150ig2",
+      "name": "Eaton 5P 1150i G2",
+      "brand": "Eaton",
+      "ean": [
+        "3553340710278"
+      ],
+      "baseline": 2520,
+      "hardThreshold": 2300,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.5P1150IG2.html",
+      "specNote": "1150 VA / 920 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13.",
+      "variantNote": null,
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "150 x 233 x 345 mm, 11 kg",
+      "runtime200W": {
+        "minutes": 34,
+        "method": "wykres producenta",
+        "note": "eg.eaton.com"
+      },
+      "perMin": 76.6,
+      "next": {
+        "price": 2666.85,
+        "shop": "senetic",
+        "url": "https://www.senetic.pl/product/5P1150IG2"
+      },
+      "deal": "+3,3% vs cena bazowa 2520 zl · +2,6% vs mediana 30 dni · −2,4% vs nastepna oferta (2666,85 zl, senetic)",
+      "best": {
+        "shop": "morele",
+        "price": 2602.99,
+        "url": "https://www.morele.net/ups-eaton-5p-1150i-g2-5p1150ig2-14138990/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 2602.99,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-eaton-5p-1150i-g2-5p1150ig2-14138990/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2602.99,
+          "shippingKnown": false
+        },
+        {
+          "shop": "senetic",
+          "price": 2666.85,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/5P1150IG2",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2666.85,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-eaton-5p-1150i-g2-5p1150ig2-14138990/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1231,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/5P1150IG2",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 284,
+          "issues": [
+            "cena netto ze strony (2168.17) przeliczona na brutto"
+          ]
+        }
+      ],
+      "stats": {
+        "median": 2536.2,
+        "allTimeLow": 2534,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 8
+    },
+    {
+      "id": "5sc1000i",
+      "name": "Eaton 5SC 1000i",
+      "brand": "Eaton",
+      "ean": [],
+      "baseline": 2100,
+      "hardThreshold": 1900,
+      "specSource": "https://www.eaton.com/pl/pl-pl/skuPage.5SC1000I.html",
+      "specNote": "1000 VA / 700 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13.",
+      "variantNote": null,
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "150 x 210 x 340 mm, 11,1 kg",
+      "runtime200W": {
+        "minutes": 25,
+        "method": "wykres producenta",
+        "note": "eg.eaton.com"
+      },
+      "perMin": 78.1,
+      "next": {
+        "price": 1976.09,
+        "shop": "senetic",
+        "url": "https://www.senetic.pl/product/5SC1000i"
+      },
+      "deal": "−7,1% vs cena bazowa 2100 zl · −0,3% vs mediana 30 dni · −1,2% vs nastepna oferta (1976,09 zl, senetic)",
+      "best": {
+        "shop": "morele",
+        "price": 1951.53,
+        "url": "https://www.morele.net/ups-eaton-5sc-1000i-5sc1000i-608241/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 1951.53,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-eaton-5sc-1000i-5sc1000i-608241/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1951.53,
+          "shippingKnown": false
+        },
+        {
+          "shop": "senetic",
+          "price": 1976.09,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/5SC1000i",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1976.09,
+          "shippingKnown": false
+        },
+        {
+          "shop": "itnes",
+          "price": 2739,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-eaton-tower/zasilacz-awaryjny-ups-eaton-5sc-5sc1000i-tower-700-w-8-x-iec-c13-1-x-usb-czarny.html",
+          "method": "jsonld",
+          "shipping": 0,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2739,
+          "shippingKnown": true
+        }
+      ],
+      "sources": [
+        {
+          "shop": "itnes",
+          "kind": "shop",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-eaton-tower/zasilacz-awaryjny-ups-eaton-5sc-5sc1000i-tower-700-w-8-x-iec-c13-1-x-usb-czarny.html",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1201,
+          "issues": []
+        },
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-eaton-5sc-1000i-5sc1000i-608241/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1612,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/5SC1000i",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 317,
+          "issues": [
+            "cena netto ze strony (1606.58) przeliczona na brutto"
+          ]
+        },
+        {
+          "shop": "empik",
+          "kind": "shop",
+          "url": "https://www.empik.com/zasilacz-awaryjny-ups-eaton-5sc1000i-twr-1000va-eaton,p1433999763,elektronika-p",
+          "status": "noprice",
+          "bestEffort": false,
+          "found": 0,
+          "ms": 2463,
+          "issues": [
+            "zadna warstwa nie znalazla ceny",
+            "tytul: \"Zasilacz Awaryjny Ups Eaton 5Sc1000I (Twr; 1000Va) - Eaton | Sklep EMPIK.COM\"",
+            "65 kB, via browser",
+            "tekst: \"Zasilacz Awaryjny Ups Eaton 5Sc1000I (Twr; 1000Va) - Eaton | Sklep EMPIK.COM Błąd 500 Ups, coś poszło nie tak... Przejdź\""
+          ]
+        }
+      ],
+      "stats": {
+        "median": 1957.195,
+        "allTimeLow": 1951.53,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 9
+    },
+    {
+      "id": "smt1000ic",
+      "name": "APC Smart-UPS SMT1000IC",
+      "brand": "APC",
+      "ean": [],
+      "baseline": 2600,
+      "hardThreshold": 2350,
+      "specSource": "https://www.se.com/pl/pl/product/SMT1000IC/",
+      "specNote": "1000 VA / 700 W, line-interactive, czysta sinusoida, USB HID, 8x IEC C13, SmartConnect.",
+      "variantNote": null,
+      "topology": "line-interactive",
+      "form": "tower",
+      "size": "ok. 170 x 219 x 439 mm, ok. 19 kg",
+      "runtime200W": {
+        "minutes": 37,
+        "method": "szacunek",
+        "note": "Brak wykresu APC dla 200 W. Polowa obciazenia (350 W): 19 min; przeskalowane wykladnikiem 1,2 z krzywych CyberPower."
+      },
+      "perMin": 74.9,
+      "next": {
+        "price": 2969.18,
+        "shop": "senetic",
+        "url": "https://www.senetic.pl/product/SMT1000IC"
+      },
+      "deal": "+6,6% vs cena bazowa 2600 zl · +1,6% vs mediana 30 dni · −6,6% vs nastepna oferta (2969,18 zl, senetic)",
+      "best": {
+        "shop": "morele",
+        "price": 2772.63,
+        "url": "https://www.morele.net/ups-apc-smart-ups-srv-1000-smt1000ic-4914047/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 2772.63,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-apc-smart-ups-srv-1000-smt1000ic-4914047/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2772.63,
+          "shippingKnown": false
+        },
+        {
+          "shop": "senetic",
+          "price": 2969.18,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/SMT1000IC",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2969.18,
+          "shippingKnown": false
+        },
+        {
+          "shop": "itnes",
+          "price": 3299,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-apc-tower/zasilacz-awaryjny-ups-apc-smart-ups-smt1000ic-tower-1000va-700w-8-x-iec-c13-1-x-rj-45-1-x-usb-czarny.html",
+          "method": "jsonld",
+          "shipping": 0,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 3299,
+          "shippingKnown": true
+        }
+      ],
+      "sources": [
+        {
+          "shop": "itnes",
+          "kind": "shop",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-apc-tower/zasilacz-awaryjny-ups-apc-smart-ups-smt1000ic-tower-1000va-700w-8-x-iec-c13-1-x-rj-45-1-x-usb-czarny.html",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1362,
+          "issues": []
+        },
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-apc-smart-ups-srv-1000-smt1000ic-4914047/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1735,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/SMT1000IC",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 1037,
+          "issues": [
+            "cena netto ze strony (2413.97) przeliczona na brutto"
+          ]
+        }
+      ],
+      "stats": {
+        "median": 2728.8100000000004,
+        "allTimeLow": 2726.07,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 7
+    },
+    {
+      "id": "ols1500ert2ua",
+      "name": "CyberPower OLS1500ERT2UA",
+      "brand": "CyberPower",
+      "ean": [
+        "4711027790282"
+      ],
+      "baseline": 2120,
+      "hardThreshold": 1550,
+      "specSource": "https://www.cyberpower.com/eu/pl/product/sku/ols1500ert2ua",
+      "specNote": "1500 VA / 1350 W, online, czysta sinusoida, USB HID, 8x IEC C13. Wariant -B ma inny EAN - nie jest sledzony.",
+      "variantNote": null,
+      "topology": "online",
+      "form": "rack 2U",
+      "size": "438 x 88 x 430 mm, 16,8 kg",
+      "runtime200W": {
+        "minutes": 30,
+        "method": "wykres producenta, niepewny",
+        "note": "Wykres CyberPower jest nierealnie plaski (100 W: 41,5 min, 600 W: 17,4 min). Polowa obciazenia: 15,3 min."
+      },
+      "perMin": 54,
+      "next": {
+        "price": 1654,
+        "shop": "itnes",
+        "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-ols1500ert2ua-1500va-900w-topologia-online.html"
+      },
+      "deal": "−23,5% vs cena bazowa 2120 zl · −0,3% vs mediana 30 dni · −2% vs nastepna oferta (1654 zl, itnes)",
+      "best": {
+        "shop": "morele",
+        "price": 1620.76,
+        "url": "https://www.morele.net/ups-cyberpower-ols1500ert2ua-13168677/",
+        "availability": "dostepny",
+        "variant": null
+      },
+      "offers": [
+        {
+          "shop": "morele",
+          "price": 1620.76,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.morele.net/ups-cyberpower-ols1500ert2ua-13168677/",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1620.76,
+          "shippingKnown": false
+        },
+        {
+          "shop": "itnes",
+          "price": 1654,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-ols1500ert2ua-1500va-900w-topologia-online.html",
+          "method": "jsonld",
+          "shipping": 0,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1654,
+          "shippingKnown": true
+        },
+        {
+          "shop": "cebit",
+          "price": 1896.34,
+          "currency": "PLN",
+          "availability": null,
+          "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-OLS1500ERT2UA-8xC13USBRS232RelayDry-contact/101875",
+          "method": "meta",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 1896.34,
+          "shippingKnown": false
+        },
+        {
+          "shop": "proline",
+          "price": 2499,
+          "currency": "PLN",
+          "availability": "na zamowienie",
+          "url": "https://proline.pl/cyberpower-ols1500ert2ua-p7114282",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2499,
+          "shippingKnown": false
+        },
+        {
+          "shop": "senetic",
+          "price": 2590,
+          "currency": "PLN",
+          "availability": "dostepny",
+          "url": "https://www.senetic.pl/product/OLS1500ERT2UA",
+          "method": "jsonld",
+          "shipping": null,
+          "discountPct": 0,
+          "note": null,
+          "variant": null,
+          "cost": 2590,
+          "shippingKnown": false
+        }
+      ],
+      "sources": [
+        {
+          "shop": "itnes",
+          "kind": "shop",
+          "url": "https://itnes.pl/zasilacze-awaryjne-ups-cyberpower-rack/zasilacz-awaryjny-ups-cyberpower-ols1500ert2ua-1500va-900w-topologia-online.html",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 594,
+          "issues": []
+        },
+        {
+          "shop": "morele",
+          "kind": "shop",
+          "url": "https://www.morele.net/ups-cyberpower-ols1500ert2ua-13168677/",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 998,
+          "issues": []
+        },
+        {
+          "shop": "senetic",
+          "kind": "shop",
+          "url": "https://www.senetic.pl/product/OLS1500ERT2UA",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 526,
+          "issues": [
+            "cena netto ze strony (2105.69) przeliczona na brutto"
+          ]
+        },
+        {
+          "shop": "cebit",
+          "kind": "shop",
+          "url": "https://www.cebit.pl/pl/p/CyberPower-Zasilacz-awaryjny-UPS-OLS1500ERT2UA-8xC13USBRS232RelayDry-contact/101875",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 450,
+          "issues": []
+        },
+        {
+          "shop": "proline",
+          "kind": "shop",
+          "url": "https://proline.pl/cyberpower-ols1500ert2ua-p7114282",
+          "status": "ok",
+          "bestEffort": false,
+          "found": 1,
+          "ms": 2865,
+          "issues": []
+        }
+      ],
+      "stats": {
+        "median": 1625.14,
+        "allTimeLow": 1620.76,
+        "samples": 28
+      },
+      "alerted": false,
+      "suppressed": false,
+      "historyPoints": 29,
+      "rank": 5
+    }
+  ],
+  "alerts": [],
+  "run": {
+    "status": "degraded",
+    "startedAt": "2026-10-20T00:27:35.121Z",
+    "products": 10,
+    "sourcesOk": 36,
+    "sourcesBad": 1,
+    "alerts": 0,
+    "productsWithoutPrice": [],
+    "runUrl": "https://github.com/drinkman1/ups-watch/actions/runs/39347711722"
+  },
+  "local": null,
+  "ranking": {
+    "loadWatts": 200,
+    "order": [
+      "ols1000ea",
+      "ols1000ert2ua",
+      "pr1000elcd",
+      "pr1000ert2u",
+      "ols1500ert2ua",
+      "9e1000i",
+      "smt1000ic",
+      "5p1150ig2",
+      "5sc1000i",
+      "9e1000ir"
+    ],
+    "total": 10,
+    "best": {
+      "id": "ols1000ea",
+      "name": "CyberPower OLS1000EA",
+      "perMin": 25.8,
+      "price": 902.24,
+      "shop": "morele",
+      "url": "https://www.morele.net/ups-cyberpower-main-stream-online-1000va-ols1000ea-de-8387937/"
+    }
+  }
+}

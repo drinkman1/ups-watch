@@ -1,0 +1,98 @@
+{
+  "ols1000ea|morele|906.09": 1791909708428,
+  "ols1500ert2ua|morele|1649.06": 1791909708428,
+  "telegram|best|ols1000ea": {
+    "price": 902.24,
+    "shop": "morele",
+    "ts": "2026-10-20T00:28:35.862Z"
+  },
+  "telegram|best|pr1000elcd": {
+    "price": 1820.87,
+    "shop": "morele",
+    "ts": "2026-10-19T13:41:09.694Z"
+  },
+  "telegram|best|pr1000ert2u": {
+    "price": 2635.71,
+    "shop": "sferis",
+    "ts": "2026-10-18T16:01:20.046Z"
+  },
+  "telegram|best|ols1000ert2ua": {
+    "price": 1297.91,
+    "shop": "morele",
+    "ts": "2026-10-19T20:39:55.590Z"
+  },
+  "telegram|best|9e1000i": {
+    "price": 1801.6,
+    "shop": "morele",
+    "ts": "2026-10-19T13:41:09.694Z"
+  },
+  "telegram|best|9e1000ir": {
+    "price": 2368.86,
+    "shop": "morele",
+    "ts": "2026-10-17T10:59:49.861Z"
+  },
+  "telegram|best|5p1150ig2": {
+    "price": 2602.99,
+    "shop": "morele",
+    "ts": "2026-10-19T20:39:55.590Z"
+  },
+  "telegram|best|5sc1000i": {
+    "price": 1951.53,
+    "shop": "morele",
+    "ts": "2026-10-19T20:39:55.590Z"
+  },
+  "telegram|best|smt1000ic": {
+    "price": 2772.63,
+    "shop": "morele",
+    "ts": "2026-10-19T13:41:09.694Z"
+  },
+  "telegram|best|ols1500ert2ua": {
+    "price": 1620.76,
+    "shop": "morele",
+    "ts": "2026-10-19T13:41:09.694Z"
+  },
+  "ols1000ea|morele|904.38": 1791954294074,
+  "smt1000ic|morele|2730.78": 1791954294074,
+  "telegram|daily|2026-10-14": 1791954407639,
+  "9e1000ir|morele|2373.15": 1791979729303,
+  "5sc1000i|morele|1958.85": 1791979729303,
+  "smt1000ic|morele|2728.84": 1791979729303,
+  "telegram|degraded|CyberPower PR1000ERT2U/senetic:noprice": 1791979792893,
+  "ols1000ert2ua|morele|2263.62": 1791998556883,
+  "5sc1000i|morele|1957.99": 1791998556883,
+  "ols1500ert2ua|morele|1643.48": 1791998556883,
+  "telegram|degraded|CyberPower PR1000ERT2U/senetic:noprice,Eaton 5SC 1000i/empik:noprice": 1792169378398,
+  "5p1150ig2|morele|2534": 1792014588651,
+  "5sc1000i|morele|1952.74": 1792014588651,
+  "ols1000ea|morele|902.32": 1792040039268,
+  "pr1000elcd|morele|1831.95": 1792040039268,
+  "telegram|degraded|CyberPower PR1000ERT2U/senetic:noprice,CyberPower PR1000ERT2U/sferis:noprice": 1792040089733,
+  "9e1000ir|morele|2371.3": 1792064736300,
+  "ols1500ert2ua|morele|1629.75": 1792064736300,
+  "telegram|degraded|CyberPower PR1000ERT2U/senetic:noprice,CyberPower PR1000ERT2U/sferis:noprice,Eaton 5SC 1000i/empik:noprice": 1792064790273,
+  "telegram|daily|2026-10-15": 1792064790273,
+  "ols1000ert2ua|morele|2257.65": 1792084316580,
+  "smt1000ic|morele|2727.83": 1792084316580,
+  "telegram|degraded|CyberPower OLS1000EA/sferis:error,CyberPower PR1000ERT2U/senetic:noprice,CyberPower PR1000ERT2U/sferis:error,Eaton 5SC 1000i/empik:noprice": 1792084556055,
+  "ols1000ea|morele|902.01": 1792125883857,
+  "pr1000elcd|morele|1827.34": 1792125883857,
+  "smt1000ic|morele|2726.99": 1792125883857,
+  "9e1000ir|morele|2370.44": 1792150767820,
+  "telegram|daily|2026-10-16": 1792150816415,
+  "ols1500ert2ua|morele|1625.14": 1792169315854,
+  "5sc1000i|morele|1951.69": 1792185912592,
+  "ols1000ea|morele|901.38": 1792212148767,
+  "9e1000ir|morele|2368.86": 1792234729826,
+  "telegram|daily|2026-10-17": 1792234789861,
+  "telegram|degraded|Eaton 5SC 1000i/empik:noprice": 1792456115862,
+  "smt1000ic|morele|2726.07": 1792298877395,
+  "telegram|degraded|CyberPower OLS1000EA/sferis:error,CyberPower PR1000ERT2U/sferis:error": 1792322889922,
+  "telegram|daily|2026-10-18": 1792322889922,
+  "pr1000elcd|morele|1820.87": 1792417208986,
+  "ols1000ert2ua|morele|1414.52": 1792417208986,
+  "ols1500ert2ua|morele|1620.76": 1792417208986,
+  "telegram|degraded|CyberPower OLS1000EA/itnes-iec:error,CyberPower PR1000ERT2U/itnes:error": 1792417269694,
+  "telegram|daily|2026-10-19": 1792417269694,
+  "ols1000ert2ua|morele|1297.91": 1792442343376,
+  "5sc1000i|morele|1951.53": 1792442343376
+}
